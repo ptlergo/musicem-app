@@ -1,3 +1,4 @@
+[ ![Codeship Status for ptlergo/musicem-app](https://app.codeship.com/projects/551fb7f0-90df-0134-b06b-5aeda33c2226/status?branch=master)](https://app.codeship.com/projects/185819)
 # musicem-app
 Music Curating App Built Using MEAN Stack
 
