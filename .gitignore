@@ -4,3 +4,4 @@ node_modules
 client/bower_components
 npm-debug.log
 *.env
+*.sass-cache
