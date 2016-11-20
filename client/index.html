@@ -2,7 +2,7 @@
 <html lang="en" ng-app="myApp">
 
   <head>
-    <title> music'em app beta</title>
+    <title> music'em app (alpha)</title>
     <meta charset="UTF-8">
     <!-- <meta http-equiv="refresh" content="5" /> -->
     <meta name="description" content="music'em is content curating application.">
@@ -17,6 +17,8 @@
   <body class="container-fluid">
     <div>
       <h1>Welcome to music'em!</h1>
+      <input type="text" name="name" ng-model="name">
+      <div ng-bind="name">{{ name }}</div>
     </div>
 
 
