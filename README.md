@@ -3,25 +3,36 @@
 Music Curating App Built Using MEAN Stack
 
 #INSTALL
-Install all package dependencies
+Install all node package dependencies
 ```
 npm install
 ```
 
-Install mocha globally
+Install nodemon globally to continuously monitor the server
+```
+npm install -g nodemon
+```
+
+Install mocha globally to test the app
 ```
 npm install -g mocha
 ```
 
-Install gulp globally
+Install gulp globally to run app tasks
 ```
 npm install -g gulp
 ```
-
+##BOWER
 Install bower globally
 ```
 npm install -g bower
 ```
+
+Install bower components for client side
+```
+bower install
+```
+
 #UNIT TEST
 Run mocha test for app.
 ```
@@ -42,4 +53,9 @@ DB_PORT=0000
 After running app. visit it from the default port at: [http://localhost:3000](http://localhost:3000)
 ```
 npm start
+```
+or
+
+```
+npm monitor
 ```

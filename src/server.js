@@ -7,6 +7,12 @@ const app = express();
 // Connect clientside views
 app.use(express.static('client/'));
 
+app.get('/hello', (req, res) => {
+
+    res.status(200).send('Hello, world!');
+
+});
+
 const port = config.PORT || PORT_DEFAULT;
 
 // Using express() tell server to listen to 'port'

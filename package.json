@@ -9,7 +9,9 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "test": "mocha --reporter nyan"
+    "monitor": "nodemon app.js",
+    "test": "mocha --reporter nyan",
+    "deploy": "gcloud app deploy"
   },
   "repository": {
     "type": "git",
@@ -38,7 +40,9 @@
     "bower": "1.8.0",
     "dotenv": "2.0.0",
     "express": "4.14.0",
+    "gcloud": "^0.37.0",
     "gulp": "3.9.1",
-    "mocha": "3.1.2"
+    "mocha": "3.1.2",
+    "nodemon": "^1.11.0"
   }
 }
