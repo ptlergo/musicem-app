@@ -21,6 +21,11 @@ Install bower globally
 ```
 npm install -g bower
 ```
+#UNIT TEST
+Run mocha test for app.
+```
+npm test
+```
 
 #CONFIGURE
 Configure .env file for database. Here are some acceptable sample environment variables
