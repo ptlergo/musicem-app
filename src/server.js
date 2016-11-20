@@ -5,13 +5,7 @@ const PORT_DEFAULT = 3000;
 const app = express();
 
 // Connect clientside views
-app.use(express.static('client/'));
-
-app.get('/hello', (req, res) => {
-
-    res.status(200).send('Hello, world!');
-
-});
+app.use(express.static(path.join(__dirname, '../client/')));
 
 const port = config.PORT || PORT_DEFAULT;
 
