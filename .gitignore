@@ -1,6 +1,6 @@
 .DS_Store
 *.log
 node_modules
-bower_components
+client/bower_components
 npm-debug.log
 *.env
