@@ -5984,7 +5984,5 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-md-content {
-  background: red; }
 
 /*# sourceMappingURL=app.css.map */
