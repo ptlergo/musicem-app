@@ -4,19 +4,16 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 
 const sInput = './client/stylesheets/scss/*.scss';
-const sOutput = './client/css';
+const sOutput = './client/stylesheets/css';
 
-gulp.task('default', () => {
-
-    console.log('gulp tasking');
-
-});
+// gulp.task('default', () => {
+// });
 
 gulp.task('start', () => {
 
     nodemon({
+        ext: 'js',
         script: 'src/server.js',
-        ext: 'js'
     });
 
 });
@@ -27,7 +24,7 @@ gulp.task('sass', () => {
       src(sInput, ['sass']).
       pipe(sourcemaps.init()).
       pipe(sass().on('error', sass.logError)).
-      pipe(sourcemaps.write()).
+      pipe(sourcemaps.write('')).
       pipe(gulp.dest(sOutput));
 
 });
