@@ -1,3 +1,9 @@
-angular.module('myApp').controller('successController', ['$scope', function($scope) {
-  $scope.message = 'SUCCESS connect :)!';
-}]);
+angular.
+  module('myApp').
+  controller('successController', successController);
+
+function successController () {
+
+  this.message = 'SUCCESS connect :)!';
+
+};
