@@ -2,6 +2,9 @@ const gulp = require('gulp');
 const nodemon = require('nodemon');
 const sass = require('gulp-sass');
 
+const sInput = './client/stylesheets/scss/*.scss';
+const sOutput = './client/css';
+
 gulp.task('default', () => {
 
     console.log('gulp tasking');
@@ -18,5 +21,10 @@ gulp.task('start', () => {
 });
 
 gulp.task('sass', () => {
+
+    return gulp.
+      src(sInput, ['sass']).
+      pipe(sass().on('error', sass.logError)).
+      pipe(gulp.dest(sOutput));
 
 });
