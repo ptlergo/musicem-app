@@ -11,10 +11,10 @@
         "sourceType": "module"
     },
     "rules": {
+
         "accessor-pairs": "error",
         "array-bracket-spacing": "error",
         "array-callback-return": "error",
-        "arrow-body-style": "error",
         "arrow-parens": "error",
         "arrow-spacing": "error",
         "block-scoped-var": "error",
@@ -23,7 +23,6 @@
         "callback-return": "error",
         "camelcase": "error",
         "class-methods-use-this": "error",
-        "comma-dangle": "error",
         "comma-spacing": "error",
         "comma-style": "error",
         "complexity": "error",
@@ -176,8 +175,7 @@
         "prefer-reflect": "error",
         "prefer-rest-params": "error",
         "prefer-spread": "error",
-        "prefer-template": "error",
-        "quote-props": "error",
+        "quote-props": ["error", "as-needed"],
         "quotes": [
             "error",
             "single"
