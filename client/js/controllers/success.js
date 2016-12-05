@@ -1,6 +1,6 @@
 angular.
   module('myApp').
-  controller('successController', successController);
+  controller('SuccessController', SuccessController);
 
 /**
   * @ngdoc method
@@ -11,7 +11,7 @@ angular.
   *
   * @returns {}
 */
-function successController () {
+function SuccessController () {
 
     var vm = this;
     vm.message = 'SUCCESS connect :)!';
