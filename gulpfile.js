@@ -7,10 +7,6 @@ const sourcemaps = require('gulp-sourcemaps');
 const sInput = './client/stylesheets/scss/*.scss';
 const sOutput = './client/stylesheets/css';
 
-
-// gulp.task('default', () => {
-// });
-
 gulp.task('start', () => {
 
     nodemon({
@@ -43,3 +39,5 @@ gulp.task('watch', () => {
       });
 
 });
+
+gulp.task('default', ['start', 'start', 'watch']);
