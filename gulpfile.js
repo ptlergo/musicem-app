@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const nodemon = require('nodemon');
+const sass = require('gulp-sass');
 
 gulp.task('default', () => {
 
@@ -13,5 +14,9 @@ gulp.task('start', () => {
         script: 'src/server.js',
         ext: 'js'
     });
+
+});
+
+gulp.task('sass', () => {
 
 });
