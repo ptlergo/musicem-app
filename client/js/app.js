@@ -1,13 +1,5 @@
-angular.module('myApp', ['ui.router', 'firebase', 'ngAnimate', 'ngMaterial']).
-  constant('FIREBASE_URL', 'https://facebooklogin-4a1ff.firebaseio.com').
+angular.module('myApp', ['ui.router', 'ngAnimate', 'ngMaterial']).
   config(($stateProvider) => {
-
-      const firebaseState = {
-          controller: 'firebaseuiController',
-          name: 'firebaseui',
-          templateUrl: '../views/firebaseui.html',
-          url: '/firebaseui',
-      };
 
       const successState = {
           controller: 'successController',
@@ -15,7 +7,6 @@ angular.module('myApp', ['ui.router', 'firebase', 'ngAnimate', 'ngMaterial']).
           templateUrl: '../views/success.html',
           url: '/success',
       };
-
 
       $stateProvider.state(successState);
 
