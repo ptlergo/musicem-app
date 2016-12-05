@@ -4,6 +4,8 @@ const nodemon = require('nodemon');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
+const gulpDocs = require('gulp-ngdocs');
+
 
 const sInput = './client/stylesheets/scss/*.scss';
 const sOutput = './client/stylesheets/css';
@@ -54,6 +56,15 @@ gulp.task('watch', () => {
               event.type + ', running tasks...');
 
       });
+
+});
+
+gulp.task('ngdocs', () => {
+
+    return gulp.
+      src('./src/*.js').
+      pipe(gulpDocs.process()).
+      pipe(gulp.dest('./docs'));
 
 });
 
