@@ -9,8 +9,9 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "monitor": "nodemon app.js",
+    "monitor": "nodemon src/server.js",
     "test": "mocha --reporter nyan",
+    "sass": "sass --watch client/stylesheets",
     "deploy": "gcloud app deploy"
   },
   "repository": {
