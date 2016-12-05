@@ -17,11 +17,17 @@ gulp.task('start', () => {
 
 });
 
-gulp.task('browser-sync', () => {
+gulp.task('browser-sync', ['sass'], () => {
 
-    browserSync.init({
-      proxy: 'localhost: 8080'
-    });
+    browserSync.init({server: './client'});
+    gulp.watch(sInput, ['sass']);
+    gulp.watch('client/*.html').
+      on('change', browserSync.reload, (event) => {
+
+          log('File ' + event.path + ' was ' +
+              event.type + ', running tasks...');
+
+      });
 
 });
 
@@ -32,7 +38,9 @@ gulp.task('sass', () => {
       pipe(sourcemaps.init()).
       pipe(sass().on('error', sass.logError)).
       pipe(sourcemaps.write('')).
-      pipe(gulp.dest(sOutput));
+      pipe(gulp.dest(sOutput)).
+      pipe(browserSync.stream());
+
 
 });
 
@@ -49,4 +57,4 @@ gulp.task('watch', () => {
 
 });
 
-gulp.task('default', ['start', 'start', 'watch']);
+gulp.task('default', ['start', 'browser-sync']);
