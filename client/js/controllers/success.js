@@ -2,8 +2,18 @@ angular.
   module('myApp').
   controller('successController', successController);
 
+/**
+  * @ngdoc method
+  * @name successController
+  * @methodOf module.successController
+  * @description
+  * Indicate login/register success
+  *
+  * @returns {}
+*/
 function successController () {
 
-  this.message = 'SUCCESS connect :)!';
+    var vm = this;
+    vm.message = 'SUCCESS connect :)!';
 
 };
