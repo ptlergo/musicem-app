@@ -20,7 +20,7 @@ npm install -g mocha
 
 Install gulp globally to run app tasks
 ```
-npm install -g gulp
+npm install --global gulp-cli
 ```
 ##BOWER
 Install bower globally
