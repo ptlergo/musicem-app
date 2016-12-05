@@ -23,22 +23,6 @@ Install gulp globally to run app tasks
 npm install --global gulp-cli
 ```
 
-##GULP TASKS
-Default gulp task
-```
-gulp
-```
-
-run server using nodemon
-```
-gulp nodemon
-```
-
-watch sass files
-```
-gulp sass
-```
-
 ##BOWER
 Install bower globally
 ```
@@ -48,6 +32,38 @@ npm install -g bower
 Install bower components for client side
 ```
 bower install
+```
+
+##BROWSER SYNC
+Install browser sync globally
+```
+npm install -g browser-sync
+```
+
+##GULP TASKS
+Default gulp task to start server, watch sass, and run browsersync
+```
+gulp
+```
+
+run server using nodemon
+```
+gulp nodemon
+```
+
+compile sass files once
+```
+gulp sass
+```
+
+watch sass files
+```
+gulp watch
+```
+
+run browser-sync
+```
+gulp browser-sync
 ```
 
 #UNIT TEST

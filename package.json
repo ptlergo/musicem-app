@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/ptlergo/musicem-app#readme",
   "devDependencies": {
+    "browser-sync": "^2.18.2",
     "chai": "3.5.0",
     "eslint": "3.10.2",
     "eslint-config-airbnb": "13.0.0",

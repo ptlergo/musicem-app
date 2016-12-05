@@ -3,6 +3,7 @@ const gulp = require('gulp');
 const nodemon = require('nodemon');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
+const browserSync = require('browser-sync').create();
 
 const sInput = './client/stylesheets/scss/*.scss';
 const sOutput = './client/stylesheets/css';
@@ -12,6 +13,14 @@ gulp.task('start', () => {
     nodemon({
         ext: 'js',
         script: 'src/server.js',
+    });
+
+});
+
+gulp.task('browser-sync', () => {
+
+    browserSync.init({
+      proxy: 'localhost: 8080'
     });
 
 });
