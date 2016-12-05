@@ -22,6 +22,23 @@ Install gulp globally to run app tasks
 ```
 npm install --global gulp-cli
 ```
+
+##GULP TASKS
+Default gulp task
+```
+gulp
+```
+
+run server using nodemon
+```
+gulp nodemon
+```
+
+watch sass files
+```
+gulp sass
+```
+
 ##BOWER
 Install bower globally
 ```
