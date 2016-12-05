@@ -10,13 +10,13 @@ angular.module('myApp', ['ui.router', 'firebase', 'ngAnimate', 'ngMaterial']).
       };
 
       const successState = {
-          controller: 'SuccessController',
+          controller: 'successController',
           name: 'success',
           templateUrl: '../views/success.html',
           url: '/success',
       };
 
-      $stateProvider.state(firebaseState);
+
       $stateProvider.state(successState);
 
   });
