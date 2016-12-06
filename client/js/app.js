@@ -23,8 +23,16 @@ angular.
           url: '/home',
       };
 
+      const regState = {
+          controller: 'RegController',
+          name: 'register',
+          templateUrl: '../views/register.html',
+          url: '/register',
+      };
+
       $stateProvider.state(contentState);
       $stateProvider.state(successState);
       $stateProvider.state(loginState);
+      $stateProvider.state(regState);
 
   });
