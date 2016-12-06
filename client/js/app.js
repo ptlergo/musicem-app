@@ -8,6 +8,14 @@ angular.module('myApp', ['ui.router', 'ngAnimate', 'ngMaterial']).
           url: '/success',
       };
 
+      const loginState = {
+          controller: 'LoginController',
+          name: 'login',
+          templateUrl: '../views/login.html',
+          url: '/login',
+      };
+
       $stateProvider.state(successState);
+      $stateProvider.state(loginState);
 
   });

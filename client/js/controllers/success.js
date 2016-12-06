@@ -4,8 +4,8 @@ angular.
 
 /**
   * @ngdoc method
-  * @name successController
-  * @methodOf module.successController
+  * @name SuccessController
+  * @methodOf module.SuccessController
   * @description
   * Indicate login/register success
   *
