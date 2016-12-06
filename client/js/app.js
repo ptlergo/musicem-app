@@ -1,4 +1,5 @@
-angular.module('myApp', ['ui.router', 'ngAnimate', 'ngMaterial']).
+angular.
+  module('myApp', ['ui.router', 'ngAnimate', 'ngMaterial']).
   config(($stateProvider) => {
 
       const successState = {
@@ -15,6 +16,14 @@ angular.module('myApp', ['ui.router', 'ngAnimate', 'ngMaterial']).
           url: '/login',
       };
 
+      const contentState = {
+          controller: 'MainController',
+          name: 'home',
+          templateUrl: '../views/home.html',
+          url: '/home',
+      };
+
+      $stateProvider.state(contentState);
       $stateProvider.state(successState);
       $stateProvider.state(loginState);
 
