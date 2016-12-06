@@ -7,13 +7,13 @@ angular.
   * @name MainController
   * @methodOf module.MainController
   * @description
-  * User login options
+  * Controller for main body content
   *
   * @returns {}
 */
 function MainController () {
 
     var vm = this;
-    vm.message = 'main controller connect :)!';
+    vm.message = 'main controller connected';
 
 };
