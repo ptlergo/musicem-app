@@ -1,17 +1,17 @@
 angular.
   module('myApp').
-  controller('LoginController', LoginController);
+  controller('LoginCtrl', LoginCtrl);
 
 /**
   * @ngdoc method
-  * @name LoginController
-  * @methodOf module.LoginController
+  * @name LoginCtrl
+  * @methodOf module.LoginCtrl
   * @description
   * User login options
   *
   * @returns {}
 */
-function LoginController () {
+function LoginCtrl () {
 
     var vm = this;
     vm.message = 'login view connect :)!';

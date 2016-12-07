@@ -1,17 +1,17 @@
 angular.
   module('myApp').
-  controller('RegController', RegController);
+  controller('RegCtrl', RegCtrl);
 
 /**
   * @ngdoc method
-  * @name RegController
-  * @methodOf module.RegController
+  * @name RegCtrl
+  * @methodOf module.RegCtrl
   * @description
   * User registration options
   *
   * @returns {}
 */
-function RegController () {
+function RegCtrl () {
 
     var vm = this;
     vm.message = 'register view connect :)!';

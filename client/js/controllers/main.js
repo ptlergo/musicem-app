@@ -1,19 +1,19 @@
 angular.
   module('myApp').
-  controller('MainController', MainController);
+  controller('MainCtrl', MainCtrl);
 
 /**
   * @ngdoc method
-  * @name MainController
-  * @methodOf module.MainController
+  * @name MainCtrl
+  * @methodOf module.MainCtrl
   * @description
-  * Controller for main body content
+  * Ctrl for main body content
   *
   * @returns {}
 */
-function MainController () {
+function MainCtrl () {
 
     var vm = this;
-    vm.message = 'main controller connected';
+    vm.message = 'main Ctrl connected';
 
 };

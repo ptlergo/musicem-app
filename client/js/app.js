@@ -3,28 +3,28 @@ angular.
   config(($stateProvider) => {
 
       const successState = {
-          controller: 'SuccessController',
+          controller: 'SuccessCtrl',
           name: 'success',
           templateUrl: '../views/success.html',
           url: '/success',
       };
 
       const loginState = {
-          controller: 'LoginController',
+          controller: 'LoginCtrl',
           name: 'login',
           templateUrl: '../views/login.html',
           url: '/login',
       };
 
       const contentState = {
-          controller: 'MainController',
+          controller: 'MainCtrl',
           name: 'home',
           templateUrl: '../views/home.html',
           url: '/home',
       };
 
       const regState = {
-          controller: 'RegController',
+          controller: 'RegCtrl',
           name: 'register',
           templateUrl: '../views/register.html',
           url: '/register',
