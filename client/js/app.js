@@ -1,5 +1,6 @@
 angular.
-  module('myApp', ['ui.router', 'ngAnimate', 'ngMaterial']).
+  module('myApp', ['ui.router', 'ngAnimate', 'ngMaterial', 'firebase']).
+  constant('FIREBASE_URL', 'https://facebooklogin-4a1ff.firebaseio.com').
   config(($stateProvider) => {
 
       const successState = {
@@ -30,9 +31,26 @@ angular.
           url: '/register',
       };
 
+      const fireuiState = {
+          controller: 'firebaseuiCtrl',
+          name: 'fireui',
+          templateUrl: '../views/firebaseui.html',
+          url: '/fireui',
+      };
+
+      const config = {
+            apiKey: "AIzaSyAw0vo20GbssVKhraKrkdQgwV2oALGjNDk",
+            authDomain: "facebooklogin-4a1ff.firebaseapp.com",
+            databaseURL: "https://facebooklogin-4a1ff.firebaseio.com",
+            storageBucket: "facebooklogin-4a1ff.appspot.com",
+            messagingSenderId: "998356488921"
+          };
+
+      firebase.initializeApp(config);
       $stateProvider.state(contentState);
       $stateProvider.state(successState);
       $stateProvider.state(loginState);
       $stateProvider.state(regState);
+      $stateProvider.state(fireuiState);
 
   });
