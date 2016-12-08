@@ -15,8 +15,26 @@ RegCtrl.$inject = ['$firebaseAuth'];
 */
 function RegCtrl ($firebaseAuth) {
 
-    var vm = this;
-    var auth = $firebaseAuth();
+    const vm = this;
+    const auth = $firebaseAuth();
     vm.message = 'register view connect :)!';
+
+    vm.signIn = () => {
+
+        vm.firebaseUser = null;
+        vm.error = null;
+
+        auth.$signInAnonymously().then((firebaseUser) => {
+
+            vm.firebaseUser = firebaseUser;
+
+        }).
+        catch((error) => {
+
+            vm.error = error;
+
+        });
+
+    };
 
 };
