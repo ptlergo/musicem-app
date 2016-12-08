@@ -14,5 +14,28 @@ LoginCtrl.$inject = ['Auth', '$state'];
 */
 function LoginCtrl (Auth, $state) {
 
-  console.log(Auth);
+    const vm = this;
+
+    vm.user = {
+        email: '',
+        password: '',
+    };
+
+    vm.login = () => {
+
+        firebase.auth().
+          signInWithEmailAndPassword(vm.user.email, vm.user.password).
+          then((auth) => {
+            console.log(auth);
+
+              $state.go('home');
+
+          }, (error) => {
+
+              vm.error = error;
+
+          });
+
+    };
+
 };

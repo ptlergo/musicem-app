@@ -16,6 +16,7 @@ RegCtrl.$inject = ['$firebaseAuth'];
 function RegCtrl ($firebaseAuth) {
 
     const vm = this;
+
     const auth = $firebaseAuth();
 
 

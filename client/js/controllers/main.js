@@ -13,7 +13,8 @@ angular.
 */
 function MainCtrl () {
 
-    var vm = this;
+    const vm = this;
+
     vm.message = 'main Ctrl connected';
 
 };

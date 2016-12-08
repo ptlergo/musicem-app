@@ -13,7 +13,8 @@ angular.
 */
 function SuccessCtrl () {
 
-    var vm = this;
+    const vm = this;
+
     vm.message = 'SUCCESS connect :)!';
 
 };
