@@ -17,7 +17,6 @@ function RegCtrl ($firebaseAuth) {
 
     const vm = this;
     const auth = $firebaseAuth();
-    vm.message = 'register view connect :)!';
 
     vm.signIn = () => {
 
@@ -27,6 +26,7 @@ function RegCtrl ($firebaseAuth) {
         auth.$signInAnonymously().then((firebaseUser) => {
 
             vm.firebaseUser = firebaseUser;
+            console.log(vm.firebaseUser);
 
         }).
         catch((error) => {
