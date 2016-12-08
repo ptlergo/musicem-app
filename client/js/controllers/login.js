@@ -2,6 +2,7 @@ angular.
   module('myApp').
   controller('LoginCtrl', LoginCtrl);
 
+LoginCtrl.$inject = ['Auth', '$state'];
 /**
   * @ngdoc method
   * @name LoginCtrl
@@ -11,9 +12,7 @@ angular.
   *
   * @returns {}
 */
-function LoginCtrl () {
+function LoginCtrl (Auth, $state) {
 
-    var vm = this;
-    vm.message = 'login view connect :)!';
-
+  console.log(Auth);
 };

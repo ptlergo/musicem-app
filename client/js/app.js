@@ -31,15 +31,6 @@ angular.
           url: '/register',
       };
 
-      const config = {
-          apiKey: 'AIzaSyAw0vo20GbssVKhraKrkdQgwV2oALGjNDk',
-          authDomain: 'facebooklogin-4a1ff.firebaseapp.com',
-          databaseURL: 'https://facebooklogin-4a1ff.firebaseio.com',
-          messagingSenderId: '998356488921',
-          storageBucket: 'facebooklogin-4a1ff.appspot.com',
-      };
-
-      firebase.initializeApp(config);
       $stateProvider.state(contentState);
       $stateProvider.state(successState);
       $stateProvider.state(loginState);
