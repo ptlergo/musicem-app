@@ -1,6 +1,7 @@
 <div ng-controller="RegCtrl as m">
   <h1>{{m.message}}</h1>
-<button ng-click="m.signIn()"> sign in </button>
+  <button ng-click="m.$signOut()"> sign out </button>
+  <button ng-click="m.signIn()"> sign in </button>
 {{m.firebaseUser}}
 <p ng-if="m.firebaseUser">Signed in user: <strong>{{ m.firebaseUser }}</strong></p>
 <p ng-if="error">Error: <strong>{{ error }}</strong></p>

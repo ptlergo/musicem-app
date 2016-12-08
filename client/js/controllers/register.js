@@ -18,6 +18,7 @@ function RegCtrl ($firebaseAuth) {
     const vm = this;
     const auth = $firebaseAuth();
 
+
     vm.signIn = () => {
 
         vm.firebaseUser = null;
@@ -26,7 +27,6 @@ function RegCtrl ($firebaseAuth) {
         auth.$signInAnonymously().then((firebaseUser) => {
 
             vm.firebaseUser = firebaseUser;
-            console.log(vm.firebaseUser);
 
         }).
         catch((error) => {

@@ -1,7 +1,7 @@
 angular.
   module('myApp', ['ui.router', 'ngAnimate', 'ngMaterial', 'firebase']).
   constant('FIREBASE_URL', 'https://facebooklogin-4a1ff.firebaseio.com').
-  config(($stateProvider) => {
+  config(($stateProvider, $urlRouterProvider) => {
 
       const successState = {
           controller: 'SuccessCtrl',
@@ -31,13 +31,6 @@ angular.
           url: '/register',
       };
 
-      const fireuiState = {
-          controller: 'firebaseuiCtrl',
-          name: 'fireui',
-          templateUrl: '../views/firebaseui.html',
-          url: '/fireui',
-      };
-
       const config = {
           apiKey: 'AIzaSyAw0vo20GbssVKhraKrkdQgwV2oALGjNDk',
           authDomain: 'facebooklogin-4a1ff.firebaseapp.com',
@@ -51,6 +44,6 @@ angular.
       $stateProvider.state(successState);
       $stateProvider.state(loginState);
       $stateProvider.state(regState);
-      $stateProvider.state(fireuiState);
+      $urlRouterProvider.otherwise('/home');
 
   });
