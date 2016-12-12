@@ -16,7 +16,7 @@ MainCtrl.$inject = ['FeedService'];
 function MainCtrl (FeedService) {
 
     const vm = this;
-
-    vm.message = 'main Ctrl connected';
+    const f = FeedService;
+    vm.message = f;
 
 };
