@@ -2,6 +2,8 @@ angular.
   module('myApp').
   controller('MainCtrl', MainCtrl);
 
+MainCtrl.$inject = ['FeedService'];
+
 /**
   * @ngdoc method
   * @name MainCtrl
@@ -11,7 +13,7 @@ angular.
   *
   * @returns {}
 */
-function MainCtrl () {
+function MainCtrl (FeedService) {
 
     const vm = this;
 
