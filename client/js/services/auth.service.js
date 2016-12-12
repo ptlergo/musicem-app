@@ -18,7 +18,7 @@ const config = {
   * @description
   * User authentication service
   *
-  * @returns {}
+  * @returns { auth }
 */
 function Auth ($firebaseAuth, FIREBASE_URL) {
 
