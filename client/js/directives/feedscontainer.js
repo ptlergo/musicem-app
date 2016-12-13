@@ -13,6 +13,11 @@ angular.
   */
 function feedsContainer () {
 
-    return {templateUrl: '../../views/home.html'};
+    return {
+
+        restrict: 'E',
+        templateUrl: '../views/feeds-container.html'
+
+    };
 
 };
