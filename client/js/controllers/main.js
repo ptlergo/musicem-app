@@ -16,7 +16,10 @@ MainCtrl.$inject = ['FeedService'];
 function MainCtrl (FeedService) {
 
     const vm = this;
-    const f = FeedService;
-    vm.message = f;
+    const feedSrc = 'http://feeds.feedburner.com/TechCrunch';
+    vm.message = FeedService.parseFeed(feedSrc);
+    vm.img = 'http://i.imgur.com/OUiua38.jpg';
+
+    console.log(FeedService);
 
 };
