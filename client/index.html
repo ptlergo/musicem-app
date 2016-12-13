@@ -18,30 +18,8 @@
   </head>
 
   <body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">music'em(Alpha)</span>
-          <div class="mdl-layout-spacer"></div>
-          <nav class="mdl-navigation mdl-layout--large-screen-only">
-            <a class="mdl-navigation__link" href="">Link1</a>
-            <a class="mdl-navigation__link" href="">Link2</a>
-            <a class="mdl-navigation__link" href="">Link3</a>
-            <a class="mdl-navigation__link" href="">Link4</a>
-          </nav>
-        </div>
-      </header>
-      <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Settings</span>
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">s.Link1</a>
-          <a class="mdl-navigation__link" href="">s.Link2</a>
-          <a class="mdl-navigation__link" href="">s.Link3</a>
-          <a class="mdl-navigation__link" href="">s.Link4</a>
-        </nav>
-      </div>
-
-      <ui-view></ui-view>
+    <navigation></navigation>
+    <ui-view></ui-view>
 
     </div>
 
@@ -63,6 +41,7 @@
     <script src="js/services/auth.service.js"></script>
     <script src="js/services/feed.service.js"></script>
     <script src="js/directives/feedscontainer.js"></script>
+    <script src="js/directives/navigation.js"></script>
 
   </body>
 </html>
