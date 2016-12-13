@@ -7,13 +7,13 @@ MainCtrl.$inject = ['FeedService'];
 /**
   * @ngdoc method
   * @name MainCtrl
-  * @methodOf module.MainCtrl
+  * @methodOf module.MainController
   * @description
-  * Ctrl for main body content
+  * Control for main body content
   *
   * @returns {}
 */
-function MainCtrl (FeedService) {
+function MainController (FeedService) {
 
     const vm = this;
     const feedSrc = 'http://track.superfeedr.com/?query=site%3Athefader.com';
