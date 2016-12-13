@@ -4,7 +4,6 @@
         <md-card-title>
           <md-card-title-text>
             <span class="md-headline">J-Cole new album title</span>
-            {{m.img}}
           </md-card-title-text>
         </md-card-title>
         <img ng-src="{{m.img}}" class="md-card-image" alt="">
@@ -17,8 +16,8 @@
               <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
             </md-button>
           </md-card-icon-actions>
-          <md-button>Action 1</md-button>
-          <md-button>Action 2</md-button>
+          <md-button ng-click = "tab = 1">Action 1</md-button>
+          <md-button ng-click = "tab = 2">Action 2</md-button>
           <i class="material-icons">thumb_up</i>
           <i class="material-icons">thumb_down</i>
         </md-card-actions>
@@ -26,7 +25,7 @@
           <p>
             this is the body content as a summary. If you like this then read more by clicking
             the read more option below...
-            {{ m.message }}...
+            {{ m.message }}...{{tab}}
           </p>
           <md-button class="md-raised md-primary">more...</md-button>
         </md-card-content>
