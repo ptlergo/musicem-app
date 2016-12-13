@@ -1,17 +1,17 @@
 angular.
   module('myApp').
-  controller('SuccessCtrl', SuccessCtrl);
+  controller('SuccessController', SuccessController);
 
 /**
   * @ngdoc method
-  * @name SuccessCtrl
-  * @methodOf module.SuccessCtrl
+  * @name SuccessController
+  * @methodOf module.SuccessController
   * @description
   * Indicate login/register success
   *
   * @returns {}
 */
-function SuccessCtrl () {
+function SuccessController () {
 
     const vm = this;
 

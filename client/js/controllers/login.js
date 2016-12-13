@@ -1,18 +1,18 @@
 angular.
   module('myApp').
-  controller('LoginCtrl', LoginCtrl);
+  controller('LoginController', LoginController);
 
-LoginCtrl.$inject = ['Auth', '$state'];
+LoginController.$inject = ['Auth', '$state'];
 /**
   * @ngdoc method
-  * @name LoginCtrl
-  * @methodOf module.LoginCtrl
+  * @name LoginController
+  * @methodOf module.LoginController
   * @description
   * User login options
   *
   * @returns {}
 */
-function LoginCtrl (Auth, $state) {
+function LoginController (Auth, $state) {
 
     const vm = this;
 

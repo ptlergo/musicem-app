@@ -1,19 +1,19 @@
 angular.
   module('myApp').
-  controller('MainCtrl', MainCtrl);
+  controller('FeedController', FeedController);
 
-MainCtrl.$inject = ['FeedService'];
+FeedController.$inject = ['FeedService'];
 
 /**
   * @ngdoc method
-  * @name MainCtrl
-  * @methodOf module.MainController
+  * @name FeedController
+  * @methodOf module.FeedController
   * @description
-  * Control for main body content
+  * Control for Feed body content
   *
   * @returns {}
 */
-function MainController (FeedService) {
+function FeedController (FeedService) {
 
     const vm = this;
     const feedSrc = 'http://track.superfeedr.com/?query=site%3Athefader.com';

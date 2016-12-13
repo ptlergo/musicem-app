@@ -4,21 +4,21 @@ angular.
   config(($stateProvider, $urlRouterProvider) => {
 
       const successState = {
-          controller: 'SuccessCtrl',
+          controller: 'SuccessController',
           name: 'success',
           templateUrl: '../views/success.html',
           url: '/success',
       };
 
       const loginState = {
-          controller: 'LoginCtrl',
+          controller: 'LoginController',
           name: 'login',
           templateUrl: '../views/login.html',
           url: '/login',
       };
 
       const contentState = {
-          controller: 'MainCtrl',
+          controller: 'FeedController',
           name: 'home',
           templateUrl: '../views/home.html',
           url: '/home',
