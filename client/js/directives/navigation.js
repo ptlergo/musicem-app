@@ -16,7 +16,7 @@ function navigationBar () {
     return {
 
         restrict: 'E',
-        templateUrl: '../views/navigation.html'
+        templateUrl: '../views/templates/navigation.html'
 
     };
 
