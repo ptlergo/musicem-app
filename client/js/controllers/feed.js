@@ -16,11 +16,12 @@ FeedController.$inject = ['$http'];
 function FeedController ($http) {
 
   const vm = this;
+  vm.count = ['a', 'b', 'c'];
   vm.store = [];
   vm.message = 'teseting';
-  $http.get('http://8pounds.com/feed/').success((data) => {
-    vm.store = data;
-    console.log(vm.store);
+  $http.get('http://track.superfeedr.com/?query=site%3Athefader.com').success((data) => {
+    vm.t = angular.toJson(data);
+    console.log(vm.t);
   });
 
 
