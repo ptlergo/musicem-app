@@ -16,7 +16,7 @@ FeedController.$inject = ['$http'];
 function FeedController ($http) {
 
   const vm = this;
-  vm.count = ['a', 'b', 'c'];
+  vm.count = ['a', 'b', 'c', 'd', 'e', 'f'];
   vm.store = [];
   vm.message = 'teseting';
   $http.get('http://track.superfeedr.com/?query=site%3Athefader.com').success((data) => {
