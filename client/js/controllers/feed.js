@@ -2,7 +2,7 @@ angular.
   module('myApp').
   controller('FeedController', FeedController);
 
-FeedController.$inject = ['$http'];
+FeedController.$inject = ['FeedService'];
 
 /**
   * @ngdoc method
@@ -13,16 +13,14 @@ FeedController.$inject = ['$http'];
   *
   * @returns {}
 */
-function FeedController ($http) {
+function FeedController (FeedService) {
 
-  const vm = this;
-  vm.count = ['a', 'b', 'c', 'd', 'e', 'f'];
-  vm.store = [];
-  vm.message = 'teseting';
-  $http.get('http://track.superfeedr.com/?query=site%3Athefader.com').success((data) => {
-    vm.t = angular.toJson(data);
-    console.log(vm.t);
-  });
+    const vm = this;
+    const feedSrc = 'http://track.superfeedr.com/?query=site%3Athefader.com';
+    vm.m = FeedService.parseFeed(feedSrc);
+    vm.message = 'hello';
+    vm.img = 'http://i.imgur.com/OUiua38.jpg';
 
+    console.log(vm.message);
 
 };
