@@ -21,6 +21,5 @@ function FeedController (FeedService) {
     vm.message = 'hello';
     vm.img = 'http://i.imgur.com/OUiua38.jpg';
 
-    console.log(vm.message);
-
+    return vm.img;
 };
