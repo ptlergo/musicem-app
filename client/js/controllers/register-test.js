@@ -2,7 +2,7 @@ angular.
   module('myApp').
   controller('RegCtrl', RegCtrl);
 
-RegCtrl.$inject = ['$firebaseAuth'];
+RegCtrl.$inject = ['Auth'];
 
 /**
   * @ngdoc method
@@ -13,11 +13,11 @@ RegCtrl.$inject = ['$firebaseAuth'];
   *
   * @returns {}
 */
-function RegCtrl ($firebaseAuth) {
+function RegCtrl (Auth) {
 
     const vm = this;
 
-    const auth = $firebaseAuth();
+    const auth = Auth;
 
 
     vm.signIn = () => {
