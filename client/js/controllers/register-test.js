@@ -22,6 +22,8 @@ function RegCtrl (Auth) {
 
     vm.signIn = () => {
 
+        console.log('fire fire');
+
         vm.firebaseUser = null;
         vm.error = null;
 
