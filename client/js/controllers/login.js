@@ -38,4 +38,13 @@ function LoginController (Auth, $state) {
 
     };
 
+    vm.fblogin = () => {
+      var provider = new firebase.auth.FacebookAuthProvider();
+      const userProfile = provider.addScope('public_profile');
+      console.log('facebook login clicked');
+      console.log(userProfile);
+
+
+    };
+
 };
