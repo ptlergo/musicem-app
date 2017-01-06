@@ -27,16 +27,17 @@ function RegCtrl (Auth) {
         vm.firebaseUser = null;
         vm.error = null;
 
-        firebase.auth().signInAnonymously().then((firebaseUser) => {
+        firebase.auth().signInAnonymously().
+          then((firebaseUser) => {
 
-            vm.firebaseUser = firebaseUser;
+              vm.firebaseUser = firebaseUser;
 
-        }).
-        catch((error) => {
+          }).
+          catch((error) => {
 
-            vm.error = error;
+              vm.error = error;
 
-        });
+          });
 
     };
 
