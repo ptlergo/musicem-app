@@ -22,8 +22,6 @@ function RegCtrl (Auth) {
 
     vm.signIn = () => {
 
-      console.log(auth);
-
         vm.firebaseUser = null;
         vm.error = null;
 
@@ -31,6 +29,7 @@ function RegCtrl (Auth) {
           then((firebaseUser) => {
 
               vm.firebaseUser = firebaseUser;
+              console.log(vm.firebaseUser);
 
           }).
           catch((error) => {
