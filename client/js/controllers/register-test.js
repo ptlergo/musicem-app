@@ -22,12 +22,12 @@ function RegCtrl (Auth) {
 
     vm.signIn = () => {
 
-        console.log('fire fire');
+      console.log(auth);
 
         vm.firebaseUser = null;
         vm.error = null;
 
-        auth.$signInAnonymously().then((firebaseUser) => {
+        firebase.auth().signInAnonymously().then((firebaseUser) => {
 
             vm.firebaseUser = firebaseUser;
 
