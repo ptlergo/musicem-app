@@ -17,9 +17,8 @@ function FeedController (FeedService) {
 
     const vm = this;
     const feedSrc = 'http://track.superfeedr.com/?query=site%3Athefader.com';
-    vm.message = FeedService.parseFeed(feedSrc);
+    vm.m = FeedService.parseFeed(feedSrc);
+    vm.message = 'hello';
     vm.img = 'http://i.imgur.com/OUiua38.jpg';
-
-    console.log(vm.message);
-
+    console.log(vm.m);
 };
