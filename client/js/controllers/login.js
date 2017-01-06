@@ -39,11 +39,24 @@ function LoginController (Auth, $state) {
     };
 
     vm.fblogin = () => {
-      var provider = new firebase.auth.FacebookAuthProvider();
-      const userProfile = provider.addScope('public_profile');
-      console.log('facebook login clicked');
-      console.log(userProfile);
+        var provider = new firebase.auth.FacebookAuthProvider();
+        console.log('facebook login clicked');
 
+        firebase.auth().signInWithPopup(provider).
+          then((result) => {
+
+            var token = result.credential.accessToken;
+            var user = result.user;
+            const userProfile = provider.addScope('public_profile');
+              console.log(userProfile);
+
+      }).catch((error) => {
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          var email = error.email;
+          var credential = error.credential;
+
+      });
 
     };
 
