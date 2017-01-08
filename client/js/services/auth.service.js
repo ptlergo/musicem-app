@@ -4,11 +4,11 @@ angular.module('myApp').
 Auth.$inject = ['$firebaseAuth', 'FIREBASE_URL'];
 
 const config = {
-    apiKey: 'AIzaSyAw0vo20GbssVKhraKrkdQgwV2oALGjNDk',
-    authDomain: 'facebooklogin-4a1ff.firebaseapp.com',
-    databaseURL: 'https://facebooklogin-4a1ff.firebaseio.com',
-    messagingSenderId: '998356488921',
-    storageBucket: 'facebooklogin-4a1ff.appspot.com',
+    apiKey: 'AIzaSyClyscxZ8vuZwgRQ9TGwS-mIHiekFwWoyU',
+    authDomain: 'musicem-cd810.firebaseapp.com',
+    databaseURL: 'https://musicem-cd810.firebaseio.com',
+    messagingSenderId: '1027119518571',
+    storageBucket: 'musicem-cd810.appspot.com',
 };
 
 /**

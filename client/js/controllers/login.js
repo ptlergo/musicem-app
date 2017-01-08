@@ -43,13 +43,18 @@ function LoginController (Auth, $state) {
         const provider = new firebase.auth.FacebookAuthProvider();
 
         console.log('facebook login clicked');
+        console.log(provider);
 
         firebase.auth().signInWithPopup(provider).
           then((result) => {
+            console.log(result);
+
 
               const token = result.credential.accessToken;
               const user = result.user;
 
+              const userProf = provider.addScope('public_profile');
+              console.log(userProf);
 
           }).
           catch((error) => {
