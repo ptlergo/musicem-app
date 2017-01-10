@@ -54,7 +54,7 @@ function LoginController (Auth, $state) {
               const user = result.user;
 
               const userProf = provider.addScope('public_profile');
-              console.log(userProf);
+              console.log('user profile: ' + userProf);
 
           }).
           catch((error) => {
