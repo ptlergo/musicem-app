@@ -15,10 +15,11 @@ FeedController.$inject = ['FeedService'];
 */
 function FeedController (FeedService) {
 
+
     const vm = this;
-    const feedSrc = 'http://track.superfeedr.com/?query=site%3Athefader.com';
-    vm.m = FeedService.parseFeed(feedSrc);
+    const feedSrc = 'http://8pounds.com/feed';
     vm.message = 'hello';
+    vm.m = FeedService.parseFeed(feedSrc);
     vm.img = 'http://i.imgur.com/OUiua38.jpg';
     console.log(vm.m);
 };
