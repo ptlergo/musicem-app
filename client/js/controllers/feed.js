@@ -17,9 +17,10 @@ function FeedController (FeedService) {
 
 
     const vm = this;
-    const feedSrc = 'http://8pounds.com/feed';
+    const feedSrc = 'http://noisey.vice.com/en_us/rss';
     vm.message = 'hello';
     vm.m = FeedService.parseFeed(feedSrc);
     vm.img = 'http://i.imgur.com/OUiua38.jpg';
-    console.log(vm.m);
+    console.log(vm.m.$$state);
+
 };
