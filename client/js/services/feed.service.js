@@ -21,7 +21,7 @@ function FeedService ($http) {
             return $http.jsonp(url + '?callback=JSON_CALLBACK', []).
               success((data, status) => {
 
-                  console.log(data);
+                  console.log(data.posts[0].content);
 
               });
 
