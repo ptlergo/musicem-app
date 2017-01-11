@@ -16,7 +16,7 @@ FeedController.$inject = ['FeedService'];
 function FeedController (FeedService) {
 
     const vm = this;
-    const feedSrc = 'https://techcrunch.com/feed';
+    const feedSrc = 'http://public-api.wordpress.com/rest/v1/sites/wtmpeachtest.wordpress.com/posts';
 
     vm.feedParsed = FeedService.parseFeed(feedSrc);
     vm.img = 'http://i.imgur.com/OUiua38.jpg';
