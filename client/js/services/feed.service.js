@@ -18,9 +18,36 @@ function FeedService ($http) {
 
         parseFeed: (url) => {
 
-              return $http.jsonp('//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=50&callback=JSON_CALLBACK&q=' + encodeURIComponent(url));
+            return $http.jsonp(url + '?callback=JSON_CALLBACK', []).
+              success((data, status) => {
+
+                  console.log(data);
+
+              });
 
         }
     };
 
 };
+
+
+// $.ajax({
+//     url: 'http://api.rss2json.com/v1/api.json',
+//     method: 'GET',
+//     dataType: 'json',
+//     data: {
+//         rss_url: 'https://8pounds.com/rss',
+//         api_key: 'rsjqoqfm1w9y3nvmhvkbnimhmjwotevoi89uabuh', // put your api key here
+//         count: 10
+//     }
+//   }).done(function (response) {
+// if(response.status != 'ok'){ throw response.message; }
+//
+// console.log('====== ' + response.feed.title + ' ======');
+//
+// for(var i in response.items){
+//     var item = response.items[i];
+//     console.log(item.title);
+//
+// }
+// });
