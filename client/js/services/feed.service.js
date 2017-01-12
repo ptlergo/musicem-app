@@ -12,16 +12,16 @@ FeedService.$inject = ['$http'];
   *
   * @returns {}
 */
-function FeedService ($http) {
+function FeedServicetest ($http) {
 
     return {
 
         parseFeed: (url) => {
 
-            return $http.jsonp(url + '?callback=JSON_CALLBACK', []).
+            return $http.jsonp(encodeURI(url) + '?callback=JSON_CALLBACK', []).
               success((data, status) => {
 
-                  console.log(data.posts[0].content);
+                  console.log(data);
 
               });
 
@@ -30,6 +30,32 @@ function FeedService ($http) {
 
 };
 
+function FeedService ($http) {
+
+  return {
+
+     $http({
+
+        data: {
+
+            rss_url: 'http://techcrunch.com/rss',
+            api_key: 'rsjqoqfm1w9y3nvmhvkbnimhmjwotevoi89uabuh',
+            count: 10,
+
+        },
+        dataType: 'json',
+        method: 'GET',
+        url: 'http://api.rss2json.com/v1/api.json',
+
+    }).success((data) => {
+
+        console.log(data);
+        console.log(data.rss_url);
+
+    });
+  }
+
+};
 
 // $.ajax({
 //     url: 'http://api.rss2json.com/v1/api.json',
