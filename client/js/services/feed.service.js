@@ -35,9 +35,17 @@ function FeedService ($http) {
                 },
                 url: urlRss,
 
-            }).success((data) => {
+            }).
+            success((response) => {
 
-                console.log(data);
+                console.log(response);
+
+            }).
+            error((response) => {
+
+                console.log('!error with feed.service.js!');
+
+                return '!error with feed.service.js!' + response;
 
             });
 

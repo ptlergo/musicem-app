@@ -18,7 +18,7 @@ function FeedController (FeedService) {
     const vm = this;
     const feedSrc = 'https://techcrunch.com/rss';
 
-    vm.feedParsed = FeedService.parseFeed(feedSrc);
+    const feedParsed = FeedService.parseFeed(feedSrc);
     vm.img = 'http://i.imgur.com/OUiua38.jpg';
 
 };
