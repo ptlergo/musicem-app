@@ -12,40 +12,22 @@ FeedService.$inject = ['$http'];
   *
   * @returns {}
 */
-function FeedServicetest ($http) {
-
-    return {
-
-        parseFeed: (url) => {
-
-            return $http.jsonp(encodeURI(url) + '?callback=JSON_CALLBACK', []).
-              success((data, status) => {
-
-                  console.log(data);
-
-              });
-
-        }
-    };
-
-};
-
 function FeedService ($http) {
 
     return {
 
-        test: () => {
+        parseFeed: () => {
 
-          console.log('test function called: ');
-
-          const urlText = 'http://public-api.wordpress.com/rest/v1/sites/wtmpeachtest.wordpress.com/posts';
-          const urlRss = 'http://api.rss2json.com/v1/api.json';
-          const rssUrl = 'https://8pounds.com/rss';
+            const urlRss = 'http://api.rss2json.com/v1/api.json';
+            const rssUrl = 'https://techcrunch.com/rss';
+            const apiKey = 'rsjqoqfm1w9y3nvmhvkbnimhmjwotevoi89uabuh';
 
             $http({
 
                 params: {
-                  rss_url: rssUrl,
+                    count: 10,
+                    rss_url: rssUrl,
+                    api_key: apiKey,
                 },
                 dataType: 'json',
                 method: 'GET',
@@ -53,34 +35,11 @@ function FeedService ($http) {
 
             }).success((data) => {
 
-              console.log(data);
+                console.log(data);
 
             });
 
         }
-
-  };
+    };
 
 };
-
-
-// $.ajax({
-//     url: 'http://api.rss2json.com/v1/api.json',
-//     method: 'GET',
-//     dataType: 'json',
-//     data: {
-//         rss_url: 'https://8pounds.com/rss',
-//         api_key: 'rsjqoqfm1w9y3nvmhvkbnimhmjwotevoi89uabuh', // put your api key here
-//         count: 10
-//     }
-//   }).done(function (response) {
-// if(response.status != 'ok'){ throw response.message; }
-//
-// console.log('====== ' + response.feed.title + ' ======');
-//
-// for(var i in response.items){
-//     var item = response.items[i];
-//     console.log(item.title);
-//
-// }
-// });

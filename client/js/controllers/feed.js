@@ -19,9 +19,7 @@ function FeedController (FeedService) {
     const feedSrc = 'https%3A%2F%2Fnews.ycombinator.com%2Frss';
     const feedSrcTest = 'http://public-api.wordpress.com/rest/v1/sites/wtmpeachtest.wordpress.com/posts';
 
-    // vm.feedParsed = FeedService.parseFeed(feedSrcTest);
+    vm.feedParsed = FeedService.parseFeed();
     vm.img = 'http://i.imgur.com/OUiua38.jpg';
-
-    FeedService.test();
 
 };
