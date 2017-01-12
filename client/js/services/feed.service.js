@@ -32,25 +32,32 @@ function FeedServicetest ($http) {
 
 function FeedService ($http) {
 
-  return {
+    return {
 
-      test: () => {
+        test: () => {
 
-        console.log('test function called: ');
+          console.log('test function called: ');
 
-          $http({
+          const urlText = 'http://public-api.wordpress.com/rest/v1/sites/wtmpeachtest.wordpress.com/posts';
+          const urlRss = 'http://api.rss2json.com/v1/api.json';
+          const rssUrl = 'https://8pounds.com/rss';
 
-              dataType: 'json',
-              method: 'GET',
-              url: 'http://public-api.wordpress.com/rest/v1/sites/wtmpeachtest.wordpress.com/posts',
+            $http({
 
-          }).success((data) => {
+                params: {
+                  rss_url: rssUrl,
+                },
+                dataType: 'json',
+                method: 'GET',
+                url: urlRss,
 
-            console.log(data);
+            }).success((data) => {
 
-          });
+              console.log(data);
 
-      }
+            });
+
+        }
 
   };
 
