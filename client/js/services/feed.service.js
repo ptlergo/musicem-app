@@ -16,10 +16,9 @@ function FeedService ($http) {
 
     return {
 
-        parseFeed: () => {
+        parseFeed: (feedSrc) => {
 
             const urlRss = 'http://api.rss2json.com/v1/api.json';
-            const rssUrl = 'https://techcrunch.com/rss';
             const apiKey = 'rsjqoqfm1w9y3nvmhvkbnimhmjwotevoi89uabuh';
             const feedCount = 10;
 
@@ -31,7 +30,7 @@ function FeedService ($http) {
 
                     api_key: apiKey,
                     count: feedCount,
-                    rss_url: rssUrl,
+                    rss_url: feedSrc,
 
                 },
                 url: urlRss,

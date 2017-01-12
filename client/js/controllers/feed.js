@@ -16,10 +16,9 @@ FeedController.$inject = ['FeedService'];
 function FeedController (FeedService) {
 
     const vm = this;
-    const feedSrc = 'https%3A%2F%2Fnews.ycombinator.com%2Frss';
-    const feedSrcTest = 'http://public-api.wordpress.com/rest/v1/sites/wtmpeachtest.wordpress.com/posts';
+    const feedSrc = 'https://techcrunch.com/rss';
 
-    vm.feedParsed = FeedService.parseFeed();
+    vm.feedParsed = FeedService.parseFeed(feedSrc);
     vm.img = 'http://i.imgur.com/OUiua38.jpg';
 
 };
