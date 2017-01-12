@@ -38,7 +38,8 @@ function FeedService ($http) {
             }).
             success((response) => {
 
-                console.log(response);
+              console.log(response.items[0]);
+              console.log(response.feed);
 
             }).
             error((response) => {
