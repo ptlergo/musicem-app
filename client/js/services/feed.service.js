@@ -21,16 +21,19 @@ function FeedService ($http) {
             const urlRss = 'http://api.rss2json.com/v1/api.json';
             const rssUrl = 'https://techcrunch.com/rss';
             const apiKey = 'rsjqoqfm1w9y3nvmhvkbnimhmjwotevoi89uabuh';
+            const feedCount = 10;
 
             $http({
 
-                params: {
-                    count: 10,
-                    rss_url: rssUrl,
-                    api_key: apiKey,
-                },
                 dataType: 'json',
                 method: 'GET',
+                params: {
+
+                    api_key: apiKey,
+                    count: feedCount,
+                    rss_url: rssUrl,
+
+                },
                 url: urlRss,
 
             }).success((data) => {
