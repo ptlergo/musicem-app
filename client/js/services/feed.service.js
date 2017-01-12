@@ -36,6 +36,16 @@ function FeedService ($http) {
 
     test: () => {
       console.log('tet');
+      $http({
+        method: 'GET',
+        dataType: 'json',
+        url: 'http://api.rss2json.com/v1/api.json',
+        data: {
+          first: 'first data'
+        }
+      }).success((data) => {
+        console.log(data);
+      });
     }
   }
 
