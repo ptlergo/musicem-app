@@ -34,28 +34,13 @@ function FeedService ($http) {
 
   return {
 
-     $http({
-
-        data: {
-
-            rss_url: 'http://techcrunch.com/rss',
-            api_key: 'rsjqoqfm1w9y3nvmhvkbnimhmjwotevoi89uabuh',
-            count: 10,
-
-        },
-        dataType: 'json',
-        method: 'GET',
-        url: 'http://api.rss2json.com/v1/api.json',
-
-    }).success((data) => {
-
-        console.log(data);
-        console.log(data.rss_url);
-
-    });
+    test: () => {
+      console.log('tet');
+    }
   }
 
 };
+
 
 // $.ajax({
 //     url: 'http://api.rss2json.com/v1/api.json',
