@@ -8,9 +8,9 @@ FeedService.$inject = ['$http'];
   * @name FeedService
   * @methodOf module.FeedService
   * @description
-  * Websites feeds
+  * Uses rss2json API to manipulate a website's rss xml to json
   *
-  * @returns {}
+  * @returns {Obj} data object of website's rss
 */
 function FeedService ($http) {
 
