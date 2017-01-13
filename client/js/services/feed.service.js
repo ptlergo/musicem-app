@@ -37,9 +37,13 @@ function FeedService ($http) {
 
             }).
             success((response) => {
+              var data = {
+                first: response.feed
+              };
 
-              console.log(response.items[0]);
-              console.log(response.feed);
+              console.log(data);
+              console.log(response);
+              return data;
 
             }).
             error((response) => {

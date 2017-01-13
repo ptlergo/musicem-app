@@ -20,5 +20,6 @@ function FeedController (FeedService) {
 
     const feedParsed = FeedService.parseFeed(feedSrc);
     vm.img = 'http://i.imgur.com/OUiua38.jpg';
+    console.log('result: ' + FeedService.parseFeed(feedSrc));
 
 };
