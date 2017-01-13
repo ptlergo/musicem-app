@@ -42,7 +42,7 @@ function FeedController ($http) {
             feedTitle: response.feed.title,
         };
         console.log(vm.data.feedItems);
-        console.log(response);
+        console.log(vm.data.feedItems[0].title);
 
     });
 
