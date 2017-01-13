@@ -21,7 +21,6 @@ function FeedController ($http) {
     const apiKey = 'rsjqoqfm1w9y3nvmhvkbnimhmjwotevoi89uabuh';
     const feedCount = 10;
 
-    function parseFeed(feedSrc) {
       $http({
         dataType: 'json',
         method: 'GET',
@@ -34,10 +33,8 @@ function FeedController ($http) {
         },
         url: urlRss,
       }).success((response) => {
+        vm.test = response;
         console.log(response);
 
       });
-    };
-parseFeed(feedSrc);
-console.log(vm.response);
-  };
+};
