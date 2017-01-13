@@ -1,6 +1,6 @@
 angular.
   module('myApp').
-  controller('RegCtrl', RegCtrl);
+  controller('RegisterControl', RegisterControl);
 
 RegCtrl.$inject = ['Auth'];
 
@@ -13,7 +13,7 @@ RegCtrl.$inject = ['Auth'];
   *
   * @returns {}
 */
-function RegCtrl (Auth) {
+function RegisterControl (Auth) {
 
     const vm = this;
 
