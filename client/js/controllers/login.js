@@ -75,6 +75,8 @@ function LoginController (Auth, $state) {
           console.log(email + ' signed in');
           console.log(uid + ' signed in');
 
+          vm.name = user.email;
+
 
       } else {
 

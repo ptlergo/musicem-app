@@ -9,15 +9,13 @@
       </nav>
     </div>
   </header>
-  <div class="mdl-layout__drawer">
+  <div class="mdl-layout__drawer" ng-controller="LoginController as loginCtrl">
     <span class="mdl-layout-title">User Dashboard</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link"
-         ng-controller="LoginController as regCtrl"
-         ng-click="regCtrl.emailLogin()">LOGIN
+         ng-click="loginCtrl.emailLogin()">LOGIN
       </a>
       <a class="mdl-navigation__link"
-         ng-controller="LoginController as loginCtrl"
          ng-click="loginCtrl.facebookLogin()">Facebook Login
       </a>
       <a class="mdl-navigation__link" ui-sref="home">Feed 1</a>
