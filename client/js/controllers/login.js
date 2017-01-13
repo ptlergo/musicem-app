@@ -69,8 +69,11 @@ function LoginController (Auth, $state) {
       if (user) {
 
         // User is signed in.
-        console.log(user .email+ ' signed in');
-        console.log(user.uid + ' signed in');
+          const [email, emailVerified, name, photoUrl, uid] = [user.email,
+              user.emailVerified, user.displayName, user.photoUrl, user.uid];
+
+          console.log(email + ' signed in');
+          console.log(uid + ' signed in');
 
 
       } else {
