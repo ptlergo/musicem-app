@@ -37,9 +37,12 @@ function FeedService ($http) {
 
             }).
             success((response) => {
-              var data = {
-                first: response.feed
-              };
+
+                const data = {
+                    feedImage: response.feed.image,
+                    feedItems: response.items,
+                    feedTitle: response.feed.title,
+                };
 
               console.log(data);
               console.log(response);
