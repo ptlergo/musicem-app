@@ -21,20 +21,24 @@ function FeedController ($http) {
     const apiKey = 'rsjqoqfm1w9y3nvmhvkbnimhmjwotevoi89uabuh';
     const feedCount = 10;
 
-      $http({
+    $http({
         dataType: 'json',
         method: 'GET',
         params: {
 
-            api_key: apiKey,
-            count: feedCount,
-            rss_url: feedSrc,
+          api_key: apiKey,
+          count: feedCount,
+          rss_url: feedSrc,
 
         },
         url: urlRss,
-      }).success((response) => {
+
+    }).
+    success((response) => {
+
         vm.test = response;
         console.log(response);
 
-      });
+    });
+
 };
