@@ -10,7 +10,7 @@
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Settings</span>
+    <span class="mdl-layout-title">Hello, {{facebook name}}</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link"
          ng-controller="RegCtrl as r"
@@ -20,9 +20,14 @@
          ng-controller="LoginController as f"
          ng-click="f.fblogin()">Facebook Login
       </a>
-      <a class="mdl-navigation__link" ui-sref="home">home</a>
-      <a class="mdl-navigation__link" ui-sref="home">s.Link3</a>
+      <a class="mdl-navigation__link" ui-sref="home">Feed 1</a>
+      <a class="mdl-navigation__link" ui-sref="home">Feed 2</a>
+      <a class="mdl-navigation__link" ui-sref="home">Feed 3</a>
+      <a class="mdl-navigation__link" ui-sref="home">Feed 4</a>
       <a class="mdl-navigation__link" ui-sref="home">About</a>
+      <a class="mdl-navigation__link" ui-sref="">MORE SETTINGS</a>
+      <a class="mdl-navigation__link" ui-sref="">LOGOUT</a>
+
     </nav>
   </div>
 </div>
