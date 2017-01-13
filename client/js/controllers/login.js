@@ -15,11 +15,8 @@ LoginController.$inject = ['Auth', '$state'];
 function LoginController (Auth, $state) {
 
     const vm = this;
-
-    vm.user = {
-        email: '',
-        password: '',
-    };
+    const user = firebase.auth().currentUser;
+    const [name, email, photoUrl, uid, emailVerified] = [1, 2, 3, 4, 5];
 
     vm.emailLogin = () => {
 
@@ -74,7 +71,8 @@ function LoginController (Auth, $state) {
       if (user) {
 
         // User is signed in.
-        console.log(user + 'signed in');
+        console.log(user + ' signed in');
+        console.log(user + ' signed in');
 
       } else {
 
