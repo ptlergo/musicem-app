@@ -20,7 +20,7 @@
           <i class="material-icons">thumb_down</i>
         </md-card-actions>
         <md-card-content>
-          <p>
+          <p ng-bind-html = "item.content">
             {{ item.content }}
           </p>
           <md-button class="md-raised md-primary">more...</md-button>
