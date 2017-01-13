@@ -13,12 +13,12 @@
     <span class="mdl-layout-title">User Dashboard</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link"
-         ng-controller="RegisterController as regCtrl"
-         ng-click="regCtrl.signIn()">LOGIN
+         ng-controller="LoginController as regCtrl"
+         ng-click="regCtrl.emailLogin()">LOGIN
       </a>
       <a class="mdl-navigation__link"
          ng-controller="LoginController as loginCtrl"
-         ng-click="loginCtrl.fblogin()">Facebook Login
+         ng-click="loginCtrl.facebookLogin()">Facebook Login
       </a>
       <a class="mdl-navigation__link" ui-sref="home">Feed 1</a>
       <a class="mdl-navigation__link" ui-sref="home">Feed 2</a>

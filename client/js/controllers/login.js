@@ -8,7 +8,7 @@ LoginController.$inject = ['Auth', '$state'];
   * @name LoginController
   * @methodOf module.LoginController
   * @description
-  * User login options
+  * User login options: facebook, and email
   *
   * @returns {}
 */
@@ -21,7 +21,7 @@ function LoginController (Auth, $state) {
         password: '',
     };
 
-    vm.login = () => {
+    vm.emailLogin = () => {
 
         firebase.auth().
           signInWithEmailAndPassword(vm.user.email, vm.user.password).
@@ -38,7 +38,7 @@ function LoginController (Auth, $state) {
 
     };
 
-    vm.fblogin = () => {
+    vm.facebookLogin = () => {
 
         const provider = new firebase.auth.FacebookAuthProvider();
 
@@ -68,5 +68,21 @@ function LoginController (Auth, $state) {
           });
 
     };
+
+    firebase.auth().onAuthStateChanged((user) => {
+
+      if (user) {
+
+        // User is signed in.
+        console.log(user + 'signed in');
+
+      } else {
+
+        // No user is signed in.
+        console.log('user is not signed in');
+
+      }
+
+    });
 
 };
