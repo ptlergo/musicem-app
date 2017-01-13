@@ -35,7 +35,9 @@ function FeedService ($http) {
                 },
                 url: urlRss,
 
-            }).
+            }).done((response) => {
+              return response;
+            });
             success((response) => {
 
                 const data = {

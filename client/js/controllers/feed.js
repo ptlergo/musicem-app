@@ -2,7 +2,7 @@ angular.
   module('myApp').
   controller('FeedController', FeedController);
 
-FeedController.$inject = ['FeedService'];
+FeedController.$inject = ['$http'];
 
 /**
   * @ngdoc method
@@ -13,17 +13,31 @@ FeedController.$inject = ['FeedService'];
   *
   * @returns {}
 */
-function FeedController (FeedService) {
+function FeedController ($http) {
 
     const vm = this;
     const feedSrc = 'https://techcrunch.com/rss';
+    const urlRss = 'http://api.rss2json.com/v1/api.json';
+    const apiKey = 'rsjqoqfm1w9y3nvmhvkbnimhmjwotevoi89uabuh';
+    const feedCount = 10;
 
-    vm.test = FeedService.parseFeed(feedSrc);
-    vm.img = 'http://i.imgur.com/OUiua38.jpg';
+    function parseFeed(feedSrc) {
+      $http({
+        dataType: 'json',
+        method: 'GET',
+        params: {
 
-    // TODO: ?data from the FeedService's parseFeed function that returns an object from a url request?
-    console.log(vm.test);
+            api_key: apiKey,
+            count: feedCount,
+            rss_url: feedSrc,
 
-};
+        },
+        url: urlRss,
+      }).success((response) => {
+        console.log(response);
 
-console.log('test');
+      });
+    };
+parseFeed(feedSrc);
+console.log(vm.response);
+  };
