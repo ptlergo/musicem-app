@@ -2,7 +2,7 @@ angular.
   module('myApp').
   controller('FeedController', FeedController);
 
-FeedController.$inject = ['FeedService'];
+FeedController.$inject = ['$http'];
 
 /**
   * @ngdoc method
@@ -13,12 +13,9 @@ FeedController.$inject = ['FeedService'];
   *
   * @returns {}
 */
-function FeedController (FeedService) {
+function FeedController ($http) {
 
     const vm = this;
-    const feedSrc = 'http://track.superfeedr.com/?query=site%3Athefader.com';
-    vm.m = FeedService.parseFeed(feedSrc);
-    vm.message = 'hello';
     vm.img = 'http://i.imgur.com/OUiua38.jpg';
-    console.log(vm.m);
+
 };
