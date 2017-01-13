@@ -46,6 +46,8 @@ function FeedService ($http) {
 
               console.log(data);
               console.log(response);
+
+              //TODO: ?return parseFeed()'s data object for my FeedController to access and use?
               return data;
 
             }).
