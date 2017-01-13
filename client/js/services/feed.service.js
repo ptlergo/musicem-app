@@ -1,4 +1,7 @@
-/* TODO: test new service format. one function instead of function callbacks.*/
+/* TODO: test new service format. one function instead of function callbacks.
+         maybe remove the http request from service into controller where that
+         call is before the service call.
+*/
 
 angular.module('myApp').
   factory('FeedService', FeedService);
