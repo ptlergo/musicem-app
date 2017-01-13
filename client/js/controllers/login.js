@@ -53,6 +53,7 @@ function LoginController (Auth, $state) {
               const token = result.credential.accessToken;
               const user = result.user;
 
+              /*TODO: utilize facebook references */
               const userProf = provider.addScope('public_profile');
               console.log('user profile: ' + userProf);
 
