@@ -66,24 +66,32 @@ function LoginController (Auth, $state) {
 
     firebase.auth().onAuthStateChanged((user) => {
 
-      if (user) {
+        if (user) {
 
         // User is signed in.
-          const [email, emailVerified, name, photoUrl, uid] = [user.email,
-              user.emailVerified, user.displayName, user.photoUrl, user.uid];
+            const [email, emailVerified, name, photoUrl, uid] = [user.email,
+                user.emailVerified, user.displayName, user.photoUrl, user.uid];
 
-          console.log(email + ' signed in');
-          console.log(uid + ' signed in');
+            console.log(email + ' signed in');
+            console.log(uid + ' signed in');
 
-          vm.name = user.email;
+            if (user != null) {
+              user.providerData.forEach(function (profile) {
+                console.log("Sign-in provider: "+profile.providerId);
+                console.log("  Provider-specific UID: "+profile.uid);
+                console.log("  Name: "+profile.displayName);
+                console.log("  Email: "+profile.email);
+                console.log("  Photo URL: "+profile.photoURL);
+              });
+            }
 
+        } else {
 
-      } else {
+          // No user is signed in.
+          console.log('user is not signed in');
 
-        // No user is signed in.
-        console.log('user is not signed in');
-
-      }
+        }
+        return vm.name;
 
     });
 
