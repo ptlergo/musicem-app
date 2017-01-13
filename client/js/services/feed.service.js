@@ -1,3 +1,5 @@
+/* TODO: test new service format. one function instead of function callbacks.*/
+
 angular.module('myApp').
   factory('FeedService', FeedService);
 
@@ -12,53 +14,41 @@ FeedService.$inject = ['$http'];
   *
   * @returns {Obj} data object of website's rss
 */
-function FeedService ($http) {
+function FeedService ($http, feedSrc) {
 
-    return {
+    const urlRss = 'http://api.rss2json.com/v1/api.json';
+    const apiKey = 'rsjqoqfm1w9y3nvmhvkbnimhmjwotevoi89uabuh';
+    const feedCount = 10;
 
-        parseFeed: (feedSrc) => {
+    $http({
 
-            const urlRss = 'http://api.rss2json.com/v1/api.json';
-            const apiKey = 'rsjqoqfm1w9y3nvmhvkbnimhmjwotevoi89uabuh';
-            const feedCount = 10;
+        dataType: 'json',
+        method: 'GET',
+        params: {
 
-            $http({
+          api_key: apiKey,
+          count: feedCount,
+          rss_url: feedSrc,
 
-                dataType: 'json',
-                method: 'GET',
-                params: {
+        },
+        url: urlRss,
 
-                    api_key: apiKey,
-                    count: feedCount,
-                    rss_url: feedSrc,
+    }).
+    success((response) => {
 
-                },
-                url: urlRss,
+        const data = {
+            feedImage: response.feed.image,
+            feedItems: response.items,
+            feedTitle: response.feed.title,
+        };
 
-            }).done((response) => {
-              return response;
-            });
-            success((response) => {
+    }).
+    error((response) => {
 
-                const data = {
-                    feedImage: response.feed.image,
-                    feedItems: response.items,
-                    feedTitle: response.feed.title,
-                };
+      console.log('!error with feed.service.js!');
 
-                //TODO: ?return parseFeed()'s data object for my FeedController to access and use?
-                return data;
+        return '!error with feed.service.js!' + response;
 
-            }).
-            error((response) => {
-
-                console.log('!error with feed.service.js!');
-
-                return '!error with feed.service.js!' + response;
-
-            });
-
-        }
-    };
+    });
 
 };
