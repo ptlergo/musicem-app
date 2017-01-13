@@ -23,7 +23,21 @@ function LogoutController (Auth, $state) {
 
     vm.logout = () => {
 
-      console.log('logout clicked');
+        const provider = new firebase.auth.FacebookAuthProvider();
+
+        console.log('logout clicked');
+
+        firebase.auth().signOut().
+        then(() => {
+
+          console.log('success logout');
+
+        },
+        (error) => {
+
+          console.log('Error logout!');
+
+        });
 
     };
 
