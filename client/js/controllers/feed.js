@@ -16,7 +16,7 @@ FeedController.$inject = ['$http'];
 function FeedController ($http) {
 
     const vm = this;
-    const feedSrc = 'https://techcrunch.com/rss';
+    const feedSrc = 'http://www.thefader.com/feed.rss';
     const urlRss = 'http://api.rss2json.com/v1/api.json';
     const apiKey = 'rsjqoqfm1w9y3nvmhvkbnimhmjwotevoi89uabuh';
     const feedCount = 10;
@@ -36,7 +36,12 @@ function FeedController ($http) {
     }).
     success((response) => {
 
-        vm.test = response;
+        vm.data = {
+            feedImage: response.feed.image,
+            feedItems: response.items,
+            feedTitle: response.feed.title,
+        };
+        console.log(vm.data.feedItems);
         console.log(response);
 
     });
