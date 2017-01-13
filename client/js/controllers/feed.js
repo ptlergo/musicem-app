@@ -18,8 +18,12 @@ function FeedController (FeedService) {
     const vm = this;
     const feedSrc = 'https://techcrunch.com/rss';
 
-    const feedParsed = FeedService.parseFeed(feedSrc);
+    vm.test = FeedService.parseFeed(feedSrc);
     vm.img = 'http://i.imgur.com/OUiua38.jpg';
-    console.log('result: ' + FeedService.parseFeed(feedSrc));
+
+    // TODO: ?data from the FeedService's parseFeed function that returns an object from a url request?
+    console.log(vm.test);
 
 };
+
+console.log('test');
