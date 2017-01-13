@@ -1,19 +1,19 @@
 angular.
   module('myApp').
-  controller('RegisterControl', RegisterControl);
+  controller('RegisterController', RegisterController);
 
-RegCtrl.$inject = ['Auth'];
+RegisterController.$inject = ['Auth'];
 
 /**
   * @ngdoc method
-  * @name RegCtrl
-  * @methodOf module.RegCtrl
+  * @name RegisterController
+  * @methodOf module.RegisterController
   * @description
   * User registration options using angularFire
   *
   * @returns {}
 */
-function RegisterControl (Auth) {
+function RegisterController (Auth) {
 
     const vm = this;
 
