@@ -14,22 +14,34 @@ UserController.$inject = ['Auth', '$state'];
 */
 function UserController (Auth, $state) {
 
+    const vm = this;
     const user = firebase.auth().currentUser;
 
-    const vm = this;
-    vm.name = user;
-
     firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      // User is signed in.
-      console.log('user stuff ' + user);
 
-    } else {
-      // No user is signed in.
-      console.log('user nittt ' + user);
+        if (user) {
 
-    }
-  });
+            if (user !== null) {
+
+              user.providerData.forEach(function (profile) {
+
+                console.log("Sign-in provider: "+profile.providerId);
+                console.log("  Provider-specific UID: "+profile.uid);
+                console.log("  Name: "+profile.displayName);
+                console.log("  Email: "+profile.email);
+                console.log("  Photo URL: "+profile.photoURL);
+
+              });
+
+            }
+
+        } else {
+          // No user is signed in.
+          console.log('user nittt ' + user);
+
+        }
+
+    });
 
 };
 
@@ -43,15 +55,15 @@ function UserController (Auth, $state) {
 //         const [email, emailVerified, name, photoUrl, uid] = [user.email,
 //             user.emailVerified, user.displayName, user.photoUrl, user.uid];
 //
-//         if (user != null) {
-//           user.providerData.forEach(function (profile) {
-//             console.log("Sign-in provider: "+profile.providerId);
-//             console.log("  Provider-specific UID: "+profile.uid);
-//             console.log("  Name: "+profile.displayName);
-//             console.log("  Email: "+profile.email);
-//             console.log("  Photo URL: "+profile.photoURL);
-//           });
-//         }
+        // if (user != null) {
+        //   user.providerData.forEach(function (profile) {
+        //     console.log("Sign-in provider: "+profile.providerId);
+        //     console.log("  Provider-specific UID: "+profile.uid);
+        //     console.log("  Name: "+profile.displayName);
+        //     console.log("  Email: "+profile.email);
+        //     console.log("  Photo URL: "+profile.photoURL);
+        //   });
+        // }
 //
 //
 //     } else {
