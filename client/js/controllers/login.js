@@ -72,9 +72,6 @@ function LoginController (Auth, $state) {
             const [email, emailVerified, name, photoUrl, uid] = [user.email,
                 user.emailVerified, user.displayName, user.photoUrl, user.uid];
 
-            console.log(email + ' signed in');
-            console.log(uid + ' signed in');
-
             if (user != null) {
               user.providerData.forEach(function (profile) {
                 console.log("Sign-in provider: "+profile.providerId);
@@ -85,13 +82,14 @@ function LoginController (Auth, $state) {
               });
             }
 
+
         } else {
 
           // No user is signed in.
           console.log('user is not signed in');
 
         }
-        return vm.name;
+        console.log(user.email + ' stuff signed in');
 
     });
 
