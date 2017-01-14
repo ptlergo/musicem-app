@@ -42,15 +42,9 @@ function LoginController (Auth, $state) {
 
         firebase.auth().signInWithPopup(provider).
           then((result) => {
-            console.log(result);
-
 
               const token = result.credential.accessToken;
               const user = result.user;
-
-              /*TODO: utilize facebook references */
-              const userProf = provider.addScope('public_profile');
-              console.log('user profile: ' + userProf);
 
           }).
           catch((error) => {
@@ -59,38 +53,10 @@ function LoginController (Auth, $state) {
               const errorMessage = error.message;
               const email = error.email;
               const credential = error.credential;
+              console.log('error!: ' + error);
 
           });
 
     };
-
-    firebase.auth().onAuthStateChanged((user) => {
-
-        if (user) {
-
-        // User is signed in.
-            const [email, emailVerified, name, photoUrl, uid] = [user.email,
-                user.emailVerified, user.displayName, user.photoUrl, user.uid];
-
-            if (user != null) {
-              user.providerData.forEach(function (profile) {
-                console.log("Sign-in provider: "+profile.providerId);
-                console.log("  Provider-specific UID: "+profile.uid);
-                console.log("  Name: "+profile.displayName);
-                console.log("  Email: "+profile.email);
-                console.log("  Photo URL: "+profile.photoURL);
-              });
-            }
-
-
-        } else {
-
-          // No user is signed in.
-          console.log('user is not signed in');
-
-        }
-        console.log(user.email + ' stuff signed in');
-
-    });
 
 };
