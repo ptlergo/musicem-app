@@ -15,13 +15,12 @@ UserController.$inject = ['Auth', '$state'];
 function UserController (Auth, $state) {
 
     const vm = this;
-    const user = firebase.auth().currentUser;
+    var currentUser = {};
 
     firebase.auth().onAuthStateChanged(function(user) {
 
         if (user) {
 
-            if (user !== null) {
 
               user.providerData.forEach(function (profile) {
 
@@ -31,17 +30,20 @@ function UserController (Auth, $state) {
                 console.log("  Email: "+profile.email);
                 console.log("  Photo URL: "+profile.photoURL);
 
-              });
+                currentUser = user;
 
-            }
+            });
 
         } else {
           // No user is signed in.
-          console.log('user nittt ' + user);
+          console.log('user not logged in! ' + user);
 
         }
-
+          console.log(currentUser + 'ddd');
+          vm.user = currentUser;
     });
+    console.log(currentUser + 'out');
+    vm.user = currentUser;
 
 };
 
