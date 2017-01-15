@@ -15,9 +15,25 @@ UserController.$inject = ['Auth', '$state'];
 function UserController (Auth, $state) {
 
     const vm = this;
-    var currentUser = {};
+    const database = firebase.database();
+
+    function writeUserData(email) {
+
+        firebase.database().
+        set({
+
+            email: email,
+
+        }).then((name) => {console.log('dd'+email);});
+
+    };
 
     firebase.auth().onAuthStateChanged(function(user) {
+      const vm = this;
+
+
+        vm.user = user.uid;
+        console.log('herrr ' + vm.user);
 
         if (user) {
 
@@ -30,21 +46,21 @@ function UserController (Auth, $state) {
                 console.log("  Email: "+profile.email);
                 console.log("  Photo URL: "+profile.photoURL);
 
-                currentUser = user;
 
             });
+            vm.user = 'f';
 
         } else {
           // No user is signed in.
           console.log('user not logged in! ' + user);
 
         }
-          console.log(currentUser + 'ddd');
-          vm.user = currentUser;
-    });
-    console.log(currentUser + 'out');
-    vm.user = currentUser;
 
+        const userRef = firebase.database().ref('users');
+        userRef.on('g', (callback) => {
+          console.log(callback);
+        });
+    });
 };
 
 
