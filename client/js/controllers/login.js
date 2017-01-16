@@ -3,6 +3,7 @@ angular.
   controller('LoginController', LoginController);
 
 LoginController.$inject = ['Auth', '$state'];
+
 /**
   * @ngdoc method
   * @name LoginController
@@ -21,7 +22,6 @@ function LoginController (Auth, $state) {
         firebase.auth().
           signInWithEmailAndPassword(vm.user.email, vm.user.password).
           then((auth) => {
-            console.log(auth);
 
               $state.go('home');
 
@@ -37,9 +37,6 @@ function LoginController (Auth, $state) {
 
         const provider = new firebase.auth.FacebookAuthProvider();
 
-        console.log('facebook login clicked');
-        console.log(provider);
-
         firebase.auth().signInWithPopup(provider).
           then((result) => {
 
@@ -53,7 +50,6 @@ function LoginController (Auth, $state) {
               const errorMessage = error.message;
               const email = error.email;
               const credential = error.credential;
-              console.log('error!: ' + error);
 
           });
 

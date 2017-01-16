@@ -16,6 +16,7 @@ FeedController.$inject = ['$http'];
 function FeedController ($http) {
 
     const vm = this;
+
     vm.img = 'http://i.imgur.com/OUiua38.jpg';
 
 };

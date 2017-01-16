@@ -3,6 +3,7 @@ angular.
   controller('LogoutController', LogoutController);
 
 LogoutController.$inject = ['Auth', '$state'];
+
 /**
   * @ngdoc method
   * @name LogoutController
@@ -25,17 +26,15 @@ function LogoutController (Auth, $state) {
 
         const provider = new firebase.auth.FacebookAuthProvider();
 
-        console.log('logout clicked');
-
         firebase.auth().signOut().
         then(() => {
 
-          console.log('success logout');
+            console.log('success logout');
 
         },
         (error) => {
 
-          console.log('Error logout!');
+            console.log('Error logout!');
 
         });
 
