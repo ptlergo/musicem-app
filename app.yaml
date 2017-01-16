@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 api_version: go1
 env: flex
 runtime: go
+=======
+runtime: nodejs
+vm: true
+>>>>>>> bcc66b2d02843f2de0c5d8c80648d0b6c919c66a

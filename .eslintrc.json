@@ -11,10 +11,10 @@
         "sourceType": "module"
     },
     "rules": {
+
         "accessor-pairs": "error",
         "array-bracket-spacing": "error",
         "array-callback-return": "error",
-        "arrow-body-style": "error",
         "arrow-parens": "error",
         "arrow-spacing": "error",
         "block-scoped-var": "error",
@@ -23,13 +23,11 @@
         "callback-return": "error",
         "camelcase": "error",
         "class-methods-use-this": "error",
-        "comma-dangle": "error",
         "comma-spacing": "error",
         "comma-style": "error",
         "complexity": "error",
         "computed-property-spacing": "error",
         "consistent-return": "error",
-        "consistent-this": "error",
         "curly": "error",
         "default-case": "error",
         "dot-location": "error",
@@ -39,7 +37,6 @@
         "func-call-spacing": "error",
         "func-name-matching": "error",
         "func-names": "error",
-        "func-style": "error",
         "generator-star-spacing": "error",
         "global-require": "error",
         "guard-for-in": "error",
@@ -149,7 +146,7 @@
         "no-unmodified-loop-condition": "error",
         "no-unneeded-ternary": "error",
         "no-unused-expressions": "error",
-        "no-use-before-define": "error",
+        "no-use-before-define": ["error", { "functions": false }],
         "no-useless-call": "error",
         "no-useless-computed-key": "error",
         "no-useless-concat": "error",
@@ -176,8 +173,7 @@
         "prefer-reflect": "error",
         "prefer-rest-params": "error",
         "prefer-spread": "error",
-        "prefer-template": "error",
-        "quote-props": "error",
+        "quote-props": ["error", "as-needed"],
         "quotes": [
             "error",
             "single"

@@ -1,27 +1,71 @@
 [ ![Codeship Status for ptlergo/musicem-app](https://app.codeship.com/projects/551fb7f0-90df-0134-b06b-5aeda33c2226/status?branch=master)](https://app.codeship.com/projects/185819)
 # musicem-app
-Music Curating App Built Using MEAN Stack
+Music Curating App Built Using MEAN Stack. Deployed to [http://musicem-150100.appspot.com/](http://musicem-150100.appspot.com/)
 
 #INSTALL
-Install all package dependencies
+Install all node package dependencies
 ```
 npm install
 ```
 
-Install mocha globally
+Install nodemon globally to continuously monitor the server
+```
+npm install -g nodemon
+```
+
+Install mocha globally to test the app
 ```
 npm install -g mocha
 ```
 
-Install gulp globally
+Install gulp globally to run app tasks
 ```
-npm install -g gulp
+npm install --global gulp-cli
 ```
 
+##BOWER
 Install bower globally
 ```
 npm install -g bower
 ```
+
+Install bower components for client side
+```
+bower install
+```
+
+##BROWSER SYNC
+Install browser sync globally
+```
+npm install -g browser-sync
+```
+
+##GULP TASKS
+Default gulp task to start server, watch sass, and run browsersync
+```
+gulp
+```
+
+run server using nodemon
+```
+gulp nodemon
+```
+
+compile sass files once
+```
+gulp sass
+```
+
+watch sass files
+```
+gulp watch
+```
+
+run browser-sync
+```
+gulp browser-sync
+```
+
 #UNIT TEST
 Run mocha test for app.
 ```
@@ -42,4 +86,9 @@ DB_PORT=0000
 After running app. visit it from the default port at: [http://localhost:3000](http://localhost:3000)
 ```
 npm start
+```
+or
+
+```
+npm monitor
 ```
