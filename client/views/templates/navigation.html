@@ -5,20 +5,31 @@
       <span class="mdl-layout-title">music'em(Alpha)</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="">Link1</a>
-        <a class="mdl-navigation__link" href="">Link2</a>
-        <a class="mdl-navigation__link" href="">Link3</a>
-        <a class="mdl-navigation__link" href="">Link4</a>
+        <a class="mdl-navigation__link" ui-sref="home">Home</a>
       </nav>
     </div>
   </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Settings</span>
+  <div class="mdl-layout__drawer" ng-controller="LoginController as loginCtrl">
+    <span class="mdl-layout-title">User Dashboard</span>
+    <p ng-controller="UserController as userCtrl">Hello, {{userCtrl.user}}</p>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">s.Link1</a>
-      <a class="mdl-navigation__link" href="">s.Link2</a>
-      <a class="mdl-navigation__link" href="">s.Link3</a>
-      <a class="mdl-navigation__link" href="">s.Link4</a>
+      <a class="mdl-navigation__link"
+         ng-click="loginCtrl.emailLogin()">LOGIN
+      </a>
+      <a class="mdl-navigation__link"
+         ng-click="loginCtrl.facebookLogin()">Facebook Login
+      </a>
+      <a class="mdl-navigation__link" ui-sref="home">Feed 1</a>
+      <a class="mdl-navigation__link" ui-sref="home">Feed 2</a>
+      <a class="mdl-navigation__link" ui-sref="home">Feed 3</a>
+      <a class="mdl-navigation__link" ui-sref="home">Feed 4</a>
+      <a class="mdl-navigation__link" ui-sref="home">About</a>
+      <a class="mdl-navigation__link" ui-sref="settings">MORE SETTINGS</a>
+      <a class="mdl-navigation__link"
+         ng-controller = "LogoutController as logoutCtrl"
+         ng-click="logoutCtrl.logout()">LOGOUT
+      </a>
+
     </nav>
   </div>
 </div>
