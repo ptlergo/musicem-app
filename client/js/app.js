@@ -1,5 +1,5 @@
 angular.
-  module('myApp', ['ui.router', 'ngAnimate', 'ngMaterial', 'firebase']).
+  module('myApp', ['ui.router', 'ngAnimate', 'ngMaterial', 'firebase', 'ngSanitize']).
   constant('FIREBASE_URL', 'https://facebooklogin-4a1ff.firebaseio.com').
   config(($stateProvider, $urlRouterProvider) => {
 
