@@ -1,5 +1,5 @@
 [ ![Codeship Status for ptlergo/musicem-app](https://app.codeship.com/projects/551fb7f0-90df-0134-b06b-5aeda33c2226/status?branch=master)](https://app.codeship.com/projects/185819)
-# musicem-app
+# musicem-app(v1.0.0-alpha)
 Music Curating App Built Using MEAN Stack. Deployed to [http://musicem-150100.appspot.com/](http://musicem-150100.appspot.com/)
 
 #INSTALL
