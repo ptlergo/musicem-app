@@ -1,6 +1,6 @@
 [ ![Codeship Status for ptlergo/musicem-app](https://app.codeship.com/projects/551fb7f0-90df-0134-b06b-5aeda33c2226/status?branch=master)](https://app.codeship.com/projects/185819)
 # musicem-app(v1.0.0-alpha)
-Music Curating App Built Using MEAN Stack. Firebase auth for facebook login. Deployed to google cloud server: []()
+Music Curating App Built Using MEAN Stack. Firebase auth for facebook login. Deployed to google cloud server: [https://musicem-cd810.appspot.com](https://musicem-cd810.appspot.com)
 
 #INSTALL
 Install all node package dependencies
