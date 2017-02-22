@@ -1,16 +1,28 @@
 const express = require('express');
 const path = require('path');
-const bodyParser = require('bidy-parser');
+const bodyParser = require('body-parser');
 const config = require('./config');
 const PORT_DEFAULT = 3000;
 
 const app = express();
+
+// View Directory
+app.set('views', './views');
+
+// View Template Engine Register
+
+app.set('view engine', 'ejs');
+
+app.get('/', (req, res) => {
+  res.render('./views/index');
+});
 
 // Connect clientside views
 app.use(express.static(path.join(__dirname, '../client/')));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: 'false' }));
+
 const port = config.PORT || PORT_DEFAULT;
 
 // Using express() tell server to listen to 'port'
