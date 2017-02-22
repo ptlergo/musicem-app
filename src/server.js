@@ -8,6 +8,9 @@ const PORT_DEFAULT = 3000;
 
 const app = express();
 
+// Allow cross origin access from any domains
+app.use(cors());
+
 // View Directory and View Engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
