@@ -8,6 +8,8 @@ const PORT_DEFAULT = 3000;
 
 const app = express();
 
+const users = require('./routes/users');
+
 // Allow cross origin access from any domains
 app.use(cors());
 
@@ -15,6 +17,8 @@ app.use(cors());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
+
+app.use('/users', users);
 
 app.get('/', (req, res) => {
   res.render('index.html');
