@@ -1,6 +1,6 @@
 angular
 .module('myApp', ['ui.router', 'ngAnimate', 'ngMaterial', 'ngSanitize'])
-.config(($stateProvider, $urlRouterProvider) => {
+.config(($stateProvider, $locationProvider, $urlRouterProvider) => {
   const contentState = {
     controller: 'FeedController',
     name: 'home',
@@ -10,4 +10,5 @@ angular
 
   $stateProvider.state(contentState);
   $urlRouterProvider.otherwise('/home');
+  $locationProvider.html5Mode(true);
 });
