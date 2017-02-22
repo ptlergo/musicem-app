@@ -1,7 +1,7 @@
 .DS_Store
 *.log
 node_modules
-client/bower_components
 npm-debug.log
 *.env
 *.sass-cache
+src/config/musicem-cd810-firebase-adminsdk-w4xy7-ea304edc7c.json

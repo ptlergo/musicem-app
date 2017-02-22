@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const firebase = require('firebase');
 const config = require('./config');
-const fireConfig = require('./firebase-config');
+const fireConfig = require('./config/firebase-config');
 
 firebase.initializeApp(fireConfig);
 
