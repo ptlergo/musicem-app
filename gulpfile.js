@@ -19,6 +19,18 @@ gulp.task('start', () => {
 
 });
 
+/* Browser sync task */
+gulp.task('browser-sync', () => {
+
+    browserSync.init({
+      server: {
+        baseDir: './client',
+      },
+      files: './client/index.html'
+    });
+
+});
+
 /* Compile annotations into docs */
 gulp.task('ngdocs', () => {
 
@@ -29,4 +41,4 @@ gulp.task('ngdocs', () => {
 
 });
 
-gulp.task('default', ['start']);
+gulp.task('default', ['browser-sync']);
