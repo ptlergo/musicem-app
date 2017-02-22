@@ -29,4 +29,4 @@ gulp.task('ngdocs', () => {
 
 });
 
-gulp.task('default', ['start', 'browser-sync', 'watch']);
+gulp.task('default', ['start']);

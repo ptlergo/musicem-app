@@ -9,27 +9,15 @@
       </nav>
     </div>
   </header>
-  <div class="mdl-layout__drawer" ng-controller="LoginController as loginCtrl">
+  <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">User Dashboard</span>
     <p>Hello, User</p>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link"
-         ng-click="loginCtrl.emailLogin()">LOGIN
-      </a>
-      <a class="mdl-navigation__link"
-         ng-click="loginCtrl.facebookLogin()">Facebook Login
-      </a>
       <a class="mdl-navigation__link" ui-sref="home">Feed 1</a>
       <a class="mdl-navigation__link" ui-sref="home">Feed 2</a>
       <a class="mdl-navigation__link" ui-sref="home">Feed 3</a>
       <a class="mdl-navigation__link" ui-sref="home">Feed 4</a>
-      <a class="mdl-navigation__link" ui-sref="home">About</a>
       <a class="mdl-navigation__link" ui-sref="settings">MORE SETTINGS</a>
-      <a class="mdl-navigation__link"
-         ng-controller = "LogoutController as logoutCtrl"
-         ng-click="logoutCtrl.logout()">LOGOUT
-      </a>
-
     </nav>
   </div>
 </div>
