@@ -8,7 +8,20 @@ admin.initializeApp({
 });
 
 const db = admin.database();
-const ref = db.ref('restricted_access/secret_document');
+const ref = db.ref('database/data/users');
 ref.once('value', (snapshot) => {
   console.log(snapshot.val());
+});
+
+
+var usersRef = ref.child("users");
+usersRef.set({
+  alanisawesome: {
+    date_of_birth: "June 23, 1912",
+    full_name: "Alan Turing"
+  },
+  gracehop: {
+    date_of_birth: "December 9, 1906",
+    full_name: "Grace Hopper"
+  }
 });
