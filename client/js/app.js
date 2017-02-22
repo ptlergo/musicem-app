@@ -1,21 +1,6 @@
 angular.
-  module('myApp', ['ui.router', 'ngAnimate', 'ngMaterial', 'firebase', 'ngSanitize']).
-  constant('FIREBASE_URL', 'https://facebooklogin-4a1ff.firebaseio.com').
+  module('myApp', ['ui.router', 'ngAnimate', 'ngMaterial', 'ngSanitize']).
   config(($stateProvider, $urlRouterProvider) => {
-
-      const successState = {
-          controller: 'SuccessController',
-          name: 'success',
-          templateUrl: '../views/success.html',
-          url: '/success',
-      };
-
-      const loginState = {
-          controller: 'LoginController',
-          name: 'login',
-          templateUrl: '../views/login.html',
-          url: '/login',
-      };
 
       const contentState = {
           controller: 'FeedController',
@@ -25,8 +10,6 @@ angular.
       };
 
       $stateProvider.state(contentState);
-      $stateProvider.state(successState);
-      $stateProvider.state(loginState);
       $urlRouterProvider.otherwise('/home');
 
   });
