@@ -6,12 +6,10 @@ const PORT_DEFAULT = 3000;
 
 const app = express();
 
-// View Directory
-app.set('views', './views');
-
-// View Template Engine Register
-
+// View Directory and View Engine
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
 
 app.get('/', (req, res) => {
   res.render('./views/index');
