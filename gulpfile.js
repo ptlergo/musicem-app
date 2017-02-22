@@ -26,7 +26,7 @@ gulp.task('browser-sync', () => {
       server: {
         baseDir: './client',
       },
-      files: './client/index.html'
+      files: ['./client/index.html', './client/views'],
     });
 
 });
