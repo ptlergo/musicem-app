@@ -6,8 +6,8 @@ const browserSync = require('browser-sync').create();
 const gulpDocs = require('gulp-ngdocs');
 
 
-const sInput = './client/stylesheets/scss/*.scss';
-const sOutput = './client/stylesheets/css';
+const sassSource = './client/stylesheets/scss/*.scss';
+const sassDest = './client/stylesheets/css';
 
 /* Compile node server with nodemon */
 gulp.task('start', () => {
@@ -41,4 +41,16 @@ gulp.task('ngdocs', () => {
 
 });
 
-gulp.task('default', ['browser-sync']);
+/* Sass compile once then reload browser */
+gulp.task('sass', () => {
+  return gulp.src(sassSource)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(sassDest))
+    .pipe(browserSync.reload({ stream: true }));
+});
+
+/* Default task that watches Sass, html, and reloads browsersync for changes */
+gulp.task('default', ['browser-sync'], () => {
+  gulp.watch(sassSource, ['sass']);
+  gulp.watch('./client/*.html').on('change', browserSync.reload);
+});
