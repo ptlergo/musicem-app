@@ -2,7 +2,12 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const firebase = require('firebase');
 const config = require('./config');
+require('dotenv').config();
+
+console.log(process.env.apiKey);
+
 
 const PORT_DEFAULT = 3000;
 
