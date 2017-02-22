@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
   res.render('index.html');
 });
 
-// Connect clientside views
+// Connect angularjs client side views
 app.use(express.static(path.join(__dirname, '../client/')));
 
 app.use(bodyParser.json());
@@ -25,9 +25,7 @@ const port = config.PORT || PORT_DEFAULT;
 
 // Using express() tell server to listen to 'port'
 const server = app.listen(port, () => {
-
-    config.debug('listening to port:', port);
-
+  config.debug('listening to port:', port);
 });
 
 // Export server for other models to access
