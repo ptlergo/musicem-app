@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en" ng-app="myApp">
-
   <head>
     <title> music'em app (alpha)</title>
     <meta charset="UTF-8">
@@ -9,28 +8,14 @@
     <meta name="keywords" content="music,content,curating,app">
     <meta name="author" content="Patrick Funom Tunga-Lergo">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" type="text/css" href="https://code.getmdl.io/1.2.1/material.teal-orange.min.css">
-    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" type="text/css" ng-href="stylesheets/css/app.css">
-    <link rel="shortcut icon" type="image/png" href="http://i.imgur.com/8Ck79r5.png"/>
-
-  </head>
-
-  <body>
-
-    <navigation-bar></navigation-bar>
-    <div class="clearfix" style="padding-top: 5%"></div>
-    <ui-view></ui-view>
 
     <!--JAVASCRIPT FILES-->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-aria.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-animate.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-aria.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-sanitize.min.js"></script>
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
@@ -40,13 +25,27 @@
 
     <script src="js/services/auth.service.js"></script>
 
+    <script src="js/directives/feedscontainer.js"></script>
+    <script src="js/directives/navigation.js"></script>
+
     <script src="js/controllers/login.js"></script>
     <script src="js/controllers/logout.js"></script>
     <script src="js/controllers/feed.js"></script>
     <script src="js/controllers/success.js"></script>
 
-    <script src="js/directives/feedscontainer.js"></script>
-    <script src="js/directives/navigation.js"></script>
+    <!--STYLESHEETS FILES-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="https://code.getmdl.io/1.2.1/material.teal-orange.min.css">
+    <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" ng-href="stylesheets/css/app.css">
+    <link rel="shortcut icon" type="image/png" href="http://i.imgur.com/8Ck79r5.png"/>
+  </head>
+  <body>
+
+    <navigation-bar></navigation-bar>
+    <div class="clearfix" style="padding-top: 5%"></div>
+    <ui-view></ui-view>
 
   </body>
 </html>
