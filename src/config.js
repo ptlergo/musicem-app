@@ -10,9 +10,7 @@ require('dotenv').config();
  * @returns {value} a concatenated statement of val and obj printed to console
  */
 exports.debug = (val, obj) => {
-
-    console.log(val, obj);
-
+  console.log(val, obj);
 };
 
 // Port from env file

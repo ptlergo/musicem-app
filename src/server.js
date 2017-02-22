@@ -4,11 +4,9 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const firebase = require('firebase');
 const config = require('./config');
-require('dotenv').config();
+const fireConfig = require('./firebase-config');
 
-console.log(process.env.apiKey);
-
-
+firebase.initializeApp(fireConfig);
 
 const PORT_DEFAULT = 3000;
 
