@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
 app.get('/', (req, res) => {
-  res.render('./views/index');
+  res.render('index.html');
 });
 
 // Connect clientside views
