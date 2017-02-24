@@ -4,18 +4,17 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const firebaseAdmin = require('firebase-admin');
 const config = require('./config');
-const fireConfig = require('./config/firebase-config');
 const serviceAccount = require('./config/musicem-cd810-firebase-adminsdk-w4xy7-ea304edc7c.json');
 
+const PORT_DEFAULT = 3000;
 
+// Firebase database access
 firebaseAdmin.initializeApp({
   credential: firebaseAdmin.credential.cert(serviceAccount),
   databaseURL: process.env.databaseURL,
 });
 
 const database = firebaseAdmin.database().ref();
-
-const PORT_DEFAULT = 3000;
 
 const app = express();
 
@@ -39,6 +38,16 @@ app.use('/users', users);
 
 app.get('/', (req, res) => {
   res.render('index.html');
+});
+
+const scraps = {
+  key1: 'value1',
+  key2: 'value1',
+  key3: 'value1',
+};
+
+app.get('/test', (req, res) => {
+  res.json(scraps);
 });
 
 const port = config.PORT || PORT_DEFAULT;
