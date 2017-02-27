@@ -6,6 +6,9 @@ const config = require('./config');
 
 const PORT_DEFAULT = 3000;
 
+// api routes
+const api = require('./routes/api');
+
 const app = express();
 
 const users = require('./routes/users');
