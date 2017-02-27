@@ -36,7 +36,7 @@ app.use(bodyParser.urlencoded({ extended: 'false' }));
 
 app.use('/users', users);
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   res.render('index.html');
 });
 
