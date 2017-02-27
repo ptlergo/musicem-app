@@ -8,7 +8,22 @@
  * @returns { }
  */
 function nodeService($http) {
+  return {
+    // Get all data from api route 'test'
+    get: () => {
+      return $http.get('/api/test');
+    },
 
+    // Create new item under api route 'test'
+    post: () => {
+      return $http.get('/api/test', newData);
+    },
+
+    // Delete item from api route 'test'
+    delete: () => {
+      return $http.get('/api/test' + id);
+    },
+  };
 }
 
 nodeService.$inject = ['$http', '$resource'];
