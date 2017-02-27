@@ -5,8 +5,9 @@ const cors = require('cors');
 const config = require('./config');
 
 const PORT_DEFAULT = 3000;
+const port = config.PORT || PORT_DEFAULT;
 
-// api routes
+// Get API routes
 const api = require('./routes/api');
 
 const app = express();
@@ -22,26 +23,17 @@ app.engine('html', require('ejs').renderFile);
 // Connect angularjs client side views
 app.use(express.static(path.join(__dirname, '../client/')));
 
+// Parsers for POST data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: 'false' }));
 
-app.use('/users', users);
+// Set API routes
+app.use('/api', api);
 
+// Catch all other routes and return index.html
 app.get('*', (req, res) => {
   res.render('index.html');
 });
-
-const scraps = {
-  key1: 'value1',
-  key2: 'value2',
-  key3: 'value4',
-};
-
-app.get('/test', (req, res) => {
-  res.json(scraps);
-});
-
-const port = config.PORT || PORT_DEFAULT;
 
 // Using express() tell server to listen to 'port'
 const server = app.listen(port, () => {
