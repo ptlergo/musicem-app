@@ -7,10 +7,20 @@ const config = require('./config');
 const PORT_DEFAULT = 3000;
 const port = config.PORT || PORT_DEFAULT;
 
-// Get API routes
+// api routes
 const api = require('./routes/api');
 
 const app = express();
+
+// Parsers for POST data
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: 'false' }));
+
+// Connect angularjs client side views
+app.use(express.static(path.join(__dirname, '../client/')));
+
+// Set API Routes
+app.use('/api', api);
 
 // Allow cross origin access from any domains
 app.use(cors());
@@ -20,17 +30,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
-// Connect angularjs client side views
-app.use(express.static(path.join(__dirname, '../client/')));
-
-// Parsers for POST data
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: 'false' }));
-
-// Set API routes
-app.use('/api', api);
-
-// Catch all other routes and return index.html
 app.get('*', (req, res) => {
   res.render('index.html');
 });
