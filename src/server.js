@@ -11,8 +11,6 @@ const api = require('./routes/api');
 
 const app = express();
 
-const users = require('./routes/users');
-
 // Allow cross origin access from any domains
 app.use(cors());
 
