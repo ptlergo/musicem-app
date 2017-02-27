@@ -42,8 +42,8 @@ app.get('/', (req, res) => {
 
 const scraps = {
   key1: 'value1',
-  key2: 'value1',
-  key3: 'value1',
+  key2: 'value2',
+  key3: 'value4',
 };
 
 app.get('/test', (req, res) => {

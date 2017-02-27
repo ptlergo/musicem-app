@@ -20,9 +20,9 @@ gulp.task('start', () => {
 gulp.task('browser-sync', () => {
   browserSync.init({
     server: {
-      baseDir: './client',
+      baseDir: './src',
     },
-    files: './client',
+    files: ['./client', './src'],
   });
 });
 
