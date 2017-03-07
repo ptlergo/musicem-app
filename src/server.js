@@ -7,9 +7,6 @@ const config = require('./config');
 const PORT_DEFAULT = 3000;
 const port = config.PORT || PORT_DEFAULT;
 
-// api routes
-const api = require('./routes/api');
-
 const app = express();
 
 // Parsers for POST data
@@ -20,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: 'false' }));
 app.use(express.static(path.join(__dirname, '../client/')));
 
 // Set API Routes
-app.use('/api', api);
+app.use('/', require('./routes')(express));
 
 // Allow cross origin access from any domains
 app.use(cors());
