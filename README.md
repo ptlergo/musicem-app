@@ -77,11 +77,12 @@ Configure .env file for database. Here are some acceptable sample environment va
 ```
 NODE_ENV=development
 PORT=3000
-FIREBASE_API_KEY=Apikey123456
-AUTH_DOMAIN=sample.domain.firebaseapp.com
-DATABASE_URL=https://sample-domain.firebaseio.com
-STORAGE_BUCKET=sample-domain.appspot.com
-M_S_ID=1234561234567
+FIREBASE_API_KEY="<api_key>"
+AUTH_DOMAIN="<project_id>.firebaseapp.com"
+DATABASE_URL="https://<database_name>.firebaseio.com"
+STORAGE_BUCKET="<bucket>.appspot.com"
+M_S_ID=1234567891234
+
 ```
 
 #RUN
