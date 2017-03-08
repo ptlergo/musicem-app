@@ -22,13 +22,13 @@ app.use(cors());
 // Connect angularjs client side views
 app.use(express.static(path.join(__dirname, '../client/')));
 
-// View Directory and View Engine
-app.set('views', path.join(__dirname, 'views'));
+// CSide view directory set and view engine set
+app.set('views', path.join(__dirname, '../client/views'));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
-// SSide Base Route View
-app.get('/home', (req, res) => {
+// All URLs grabbed from cside directory
+app.get('*', (req, res) => {
   res.render('index.html');
 });
 
