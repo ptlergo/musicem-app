@@ -8,7 +8,15 @@ angular
     url: '/home',
   };
 
+  const welcomeState = {
+    controller: 'MainController',
+    name: 'welcome',
+    templateUrl: '../views/welcome.html',
+    url: '/welcome',
+  };
+
   $stateProvider.state(contentState);
-  $urlRouterProvider.otherwise('/home');
+  $stateProvider.state(welcomeState);
+  $urlRouterProvider.otherwise('/welcome');
   $locationProvider.html5Mode(true);
 });
