@@ -27,8 +27,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
-app.get('*', (req, res) => {
+app.get('/home', (req, res) => {
   res.render('index.html');
+});
+
+app.get('/login', (req, res) => {
+  res.render('firebaseui.html');
 });
 
 // Using express() tell server to listen to 'port'
