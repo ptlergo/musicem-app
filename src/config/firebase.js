@@ -11,5 +11,3 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-
-const ref = firebase.database().ref('');

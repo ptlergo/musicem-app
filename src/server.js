@@ -31,10 +31,6 @@ app.get('/home', (req, res) => {
   res.render('index.html');
 });
 
-app.get('/login', (req, res) => {
-  res.render('firebaseui.html');
-});
-
 // Using express() tell server to listen to 'port'
 const server = app.listen(port, () => {
   config.debug('listening to port:', port);
