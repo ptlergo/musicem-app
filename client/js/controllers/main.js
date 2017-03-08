@@ -9,6 +9,7 @@
  */
 function MainController($http) {
   const vm = this;
+  vm.message = 'main controller welcome!';
 }
 
 MainController.$inject = ['$http'];
