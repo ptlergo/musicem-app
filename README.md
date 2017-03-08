@@ -73,13 +73,15 @@ npm test
 ```
 
 #CONFIGURE
-Configure .env file for database. Here are some acceptable sample environment variables
+Configure .env file for database. Here are some acceptable sample environment variables one will receive from [firebase.google.com](firebase.google.com) to initialize a firebase app.
 ```
-DB_NAME=DatabaseSample
-DB_USER=user
-DB_PASS=password
-DB_HOST=localhost
-DB_PORT=0000
+NODE_ENV=development
+PORT=3000
+FIREBASE_API_KEY=Apikey123456
+AUTH_DOMAIN=sample.domain.firebaseapp.com
+DATABASE_URL=https://sample-domain.firebaseio.com
+STORAGE_BUCKET=sample-domain.appspot.com
+M_S_ID=1234561234567
 ```
 
 #RUN
