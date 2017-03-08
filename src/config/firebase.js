@@ -1,5 +1,6 @@
 
 const firebase = require("firebase");
+const firebaseui = require('firebaseui');
 require('dotenv').config();
 
 const firebaseConfig = {
@@ -9,5 +10,6 @@ const firebaseConfig = {
   storageBucket: process.env.STORAGE_BUCKET,
 };
 
-console.log(firebaseConfig);
 firebase.initializeApp(firebaseConfig);
+
+const ref = firebase.database().ref('');

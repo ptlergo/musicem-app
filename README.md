@@ -84,6 +84,8 @@ STORAGE_BUCKET="<bucket>.appspot.com"
 M_S_ID=1234567891234
 
 ```
+#AUTHENTICATION
+FirebaseUI is built on top of firebase for easy user login/register.
 
 #RUN
 After running app. visit it from the default port at: [http://localhost:3000](http://localhost:3000)
