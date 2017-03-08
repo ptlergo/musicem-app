@@ -3,4 +3,7 @@
   <br>
   <textarea rows=3 ng-model = "mainCtrl.message"></textarea>
   <button ng-click = "mainCtrl.postMessage()">Submit</button>
+  <ul>
+    <li ng-repeat = "message in mainCtrl.messages">{{message.msg}}</li>
+  </ul>
 </div>

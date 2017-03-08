@@ -1,12 +1,11 @@
 module.exports = (express) => {
-  const router = express.Router();
+  const firebaseInit = require('../../config/firebase');
   const bodyParser = require('body-parser');
-  router.use(bodyParser.json());
-
-
   const Xray = require('x-ray');
+  const router = express.Router();
 
   const x = Xray();
+  router.use(bodyParser.json());
 
   // Read All brands
   router.get('/brand', (req, res) => {
@@ -19,9 +18,13 @@ module.exports = (express) => {
     stream.pipe(res);
   });
 
-  router.post('/add', (req, res) => {
+  router.post('/brand', (req, res) => {
     console.log(req.body);
     res.status(200);
+  });
+
+  router.get('/add', (req, res) => {
+    res.send('messages');
   });
 
   return router;

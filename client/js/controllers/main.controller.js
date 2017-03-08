@@ -12,7 +12,13 @@ function MainController($http) {
   vm.message = 'main controller welcome!';
   vm.$http = $http;
   vm.postMessage = () => {
-    vm.$http.post('http://localhost:8080/api/add', { msg: vm.message });
+    vm.$http.post('http://localhost:8080/api/brand', { msg: vm.message });
+  };
+
+  vm.getMessages = () => {
+    vm.$http.get('http://localhost:8080/api/brand').then((result) => {
+      vm.messages = result.data;
+    });
   };
 }
 

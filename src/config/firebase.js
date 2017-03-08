@@ -1,6 +1,4 @@
-
-const firebase = require("firebase");
-const firebaseui = require('firebaseui');
+const firebase = require('firebase');
 require('dotenv').config();
 
 const firebaseConfig = {
@@ -10,4 +8,4 @@ const firebaseConfig = {
   storageBucket: process.env.STORAGE_BUCKET,
 };
 
-firebase.initializeApp(firebaseConfig);
+module.exports = firebase.initializeApp(firebaseConfig);
