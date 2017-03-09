@@ -1,10 +1,11 @@
 module.exports = (express) => {
-  const firebaseInit = require('../../config/fireConfig');
+  const fire = require('../../config/fireConfig');
   const firebase = require('firebase');
   const bodyParser = require('body-parser');
   const Xray = require('x-ray');
   const router = express.Router();
   const x = Xray();
+
   router.use(bodyParser.json());
 
   // Read All brands
@@ -25,8 +26,16 @@ module.exports = (express) => {
   });
 
   router.get('/add', (req, res) => {
+    const ref = fire.fireData.ref('cat/');
 
-    res.send('messages');
+    ref.on('value', (snapshot) => {
+      console.log('SNAPSHOT:', snapshot.val());
+      res.send(snapshot.val());
+
+    }, (err) => {
+      console.log('ERROR:', err);
+    });
+
   });
 
   return router;
