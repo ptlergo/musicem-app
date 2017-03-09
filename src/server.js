@@ -8,9 +8,10 @@ const PORT_DEFAULT = 3000;
 const port = config.PORT || PORT_DEFAULT;
 
 const app = express();
+const apiRoutes = require('./routes')(express);
 
 // Set API Routes
-app.use('/', require('./routes')(express));
+app.use('/', apiRoutes);
 
 // Parsers for POST data
 app.use(bodyParser.json());
