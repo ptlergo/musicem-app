@@ -1,6 +1,5 @@
 module.exports = (express) => {
   const fire = require('../../config/fireConfig');
-  const firebase = require('firebase');
   const bodyParser = require('body-parser');
   const Xray = require('x-ray');
   const router = express.Router();
@@ -20,7 +19,7 @@ module.exports = (express) => {
   });
 
   router.post('/brand', (req, res) => {
-    firebase.database().ref().set({ dog: req.body, cat: req.body, frog: { mouse: 'yum' } });
+    fire.fireData.ref().set({ dog: req.body, cat: req.body, frog: { mouse: 'yum' } });
     console.log(req.body);
     res.status(200);
   });
