@@ -4,6 +4,7 @@ module.exports = (express) => {
 
   // Read All brands
   router.get('/brands', (req, res) => {
+    brand.read();
     res.json({ brands: brand.create() });
   });
 
