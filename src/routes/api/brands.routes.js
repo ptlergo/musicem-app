@@ -1,11 +1,11 @@
 module.exports = (express) => {
+  const config = require('../../config');
   const brand = require('../../models/brands.models');
   const router = express.Router();
 
   // Read All brands
   router.get('/brands', (req, res) => {
-    brand.read();
-    res.json({ brands: brand.create() });
+    res.json({ brands: brand.read });
   });
 
   // Read One brand

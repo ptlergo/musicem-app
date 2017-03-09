@@ -1,3 +1,4 @@
+const config = require('../config');
 const fb = require('./fireConfig');
 
 const ref = fb.fireDatabase.ref('cat/');
@@ -15,9 +16,9 @@ module.exports = {
   },
 
   read: ref.on('value', (snapshot) => {
-    console.log(snapshot.val());
+    config.debug(snapshot.val(), 'model brand read method');
   }, (err) => {
-    console.log('ERROR! FIREBASE READ FAILED: ', err.code);
+    debug('ERROR! FIREBASE READ FAILED: ', err.code);
   }),
 
   update: () => {
