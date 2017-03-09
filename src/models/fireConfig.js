@@ -9,4 +9,4 @@ const firebaseConfig = {
 };
 
 exports.fireInit = firebase.initializeApp(firebaseConfig);
-exports.fireData = firebase.database();
+exports.fireDatabase = firebase.database();

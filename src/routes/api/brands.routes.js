@@ -4,7 +4,7 @@ module.exports = (express) => {
 
   // Read All brands
   router.get('/brands', (req, res) => {
-    res.json({ brands: 'brands route' });
+    res.json({ brands: brand.create() });
   });
 
   // Read One brand
