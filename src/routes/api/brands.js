@@ -1,5 +1,5 @@
 module.exports = (express) => {
-  const firebaseInit = require('../../config/firebase');
+  const firebaseInit = require('../../config/fireConfig');
   const firebase = require('firebase');
   const bodyParser = require('body-parser');
   const Xray = require('x-ray');
@@ -25,7 +25,7 @@ module.exports = (express) => {
   });
 
   router.get('/add', (req, res) => {
-    firebase.database().ref().set({ msg: req.body });
+
     res.send('messages');
   });
 
