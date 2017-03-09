@@ -4,7 +4,6 @@ module.exports = (express) => {
   const bodyParser = require('body-parser');
   const Xray = require('x-ray');
   const router = express.Router();
-firebaseInit.init;
   const x = Xray();
   router.use(bodyParser.json());
 
@@ -20,12 +19,13 @@ firebaseInit.init;
   });
 
   router.post('/brand', (req, res) => {
-    firebase.database().ref().set({ msg: 'mmmmm' });
+    firebase.database().ref().set({ dog: req.body, cat: req.body, frog: { mouse: 'yum' } });
     console.log(req.body);
     res.status(200);
   });
 
   router.get('/add', (req, res) => {
+    firebase.database().ref().set({ msg: req.body });
     res.send('messages');
   });
 
