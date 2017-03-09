@@ -8,4 +8,5 @@ const firebaseConfig = {
   storageBucket: process.env.STORAGE_BUCKET,
 };
 
-module.exports = firebase.initializeApp(firebaseConfig);
+exports.init = firebase.initializeApp(firebaseConfig);
+exports.database = firebase.database();

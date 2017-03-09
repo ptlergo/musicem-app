@@ -1,9 +1,10 @@
 module.exports = (express) => {
   const firebaseInit = require('../../config/firebase');
+  const firebase = require('firebase');
   const bodyParser = require('body-parser');
   const Xray = require('x-ray');
   const router = express.Router();
-
+firebaseInit.init;
   const x = Xray();
   router.use(bodyParser.json());
 
@@ -19,6 +20,7 @@ module.exports = (express) => {
   });
 
   router.post('/brand', (req, res) => {
+    firebase.database().ref().set({ msg: 'mmmmm' });
     console.log(req.body);
     res.status(200);
   });
