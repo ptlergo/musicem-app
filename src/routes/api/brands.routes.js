@@ -4,8 +4,9 @@ module.exports = (express) => {
   const router = express.Router();
 
   // Read All brands
-  router.get('/brands', (req, res) => {
-    res.json({ brands: brand.read });
+  router.get('/brand', (req, res) => {
+    brand.update('msg updated from route 2');
+    res.json({ brands: brand.ref });
   });
 
   // Read One brand

@@ -4,6 +4,7 @@ const fb = require('./fireConfig');
 const ref = fb.fireDatabase.ref('cat/');
 
 module.exports = {
+
   test: {
     msg: 'test method',
   },
@@ -12,16 +13,24 @@ module.exports = {
   },
 
   readAll: () => {
-    ref.snapshot.val();
   },
 
-  read: ref.on('value', (snapshot) => {
-    config.debug(snapshot.val(), 'model brand read method');
-  }, (err) => {
-    debug('ERROR! FIREBASE READ FAILED: ', err.code);
-  }),
+  // TODO: have snapshot be accesible at route
+  read: () => {
 
-  update: () => {
-    ref.snapshot.val();
   },
+
+  update: (updateVal) => {
+    const newMsg = {
+      msg: updateVal,
+    };
+
+    const newMsgKey = ref.child('msg').child('newMsgKey').push().key;
+
+    const updates = {};
+    updates['' + newMsgKey] = newMsg;
+
+    return ref.update(updates);
+  },
+
 };
