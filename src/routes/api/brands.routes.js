@@ -5,23 +5,23 @@ module.exports = (express) => {
 
   // Read All brands
   router.get('/brand', (req, res) => {
-    brand.update('msg updated from route 2');
+    config.debug('brand route', brand.test());
     res.json({ brands: brand.ref });
   });
 
   // Read One brand
   router.get('/brands/:id', (req, res) => {
-    res.json({ brands: 'brands route' });
+    res.json({ brands: '' });
   });
 
   // Create A brands
   router.post('/brands', (req, res) => {
-    res.json({ brands: 'brands route' });
+    res.json({ brands: '' });
   });
 
   // Update A brand
   router.put('/brands/:id', (req, res) => {
-    res.json({ brands: 'brands route' });
+    res.json({ brands: '' });
   });
 
   // Read All brands

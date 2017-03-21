@@ -7,6 +7,6 @@ module.exports = (express) => {
     res.send('api base');
   });
 
-  router.use('/api/', apiRoutes);
+  router.use('/api/v1/', apiRoutes);
   return router;
 };

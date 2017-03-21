@@ -4,9 +4,8 @@ const fb = require('./fireConfig');
 const ref = fb.fireDatabase.ref('cat/');
 
 module.exports = {
-
-  test: {
-    msg: 'test method',
+  test: () => {
+    return 'test method';
   },
 
   create: () => {
