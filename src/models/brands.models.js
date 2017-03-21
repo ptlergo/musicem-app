@@ -7,7 +7,8 @@ module.exports = {
   test: () => {
     return {
       dog: () => {
-        return 'hello dog';
+        const msg = 'hello dog';
+        return msg;
       },
       cat: () => {
         return ref.set({

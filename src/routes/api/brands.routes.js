@@ -4,9 +4,9 @@ module.exports = (express) => {
   const router = express.Router();
 
   // Read All brands
-  router.get('/brand', (req, res) => {
-    config.debug('brand route', brand.create('bar'));
-    res.json({ brands: brand.ref });
+  router.get('/brands/test', (req, res) => {
+    config.debug('brand route', brand.test().dog());
+    res.json({ brands: brand.test().dog() });
   });
 
   // Read One brand
