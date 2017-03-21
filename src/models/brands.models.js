@@ -17,7 +17,10 @@ module.exports = {
     };
   },
 
-  create: () => {
+  create: (brandname) => {
+    return ref.set({
+      msg: brandname,
+    });
   },
 
   readAll: () => {

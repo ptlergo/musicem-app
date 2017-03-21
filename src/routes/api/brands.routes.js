@@ -5,7 +5,7 @@ module.exports = (express) => {
 
   // Read All brands
   router.get('/brand', (req, res) => {
-    config.debug('brand route', brand.test().cat());
+    config.debug('brand route', brand.create('bar'));
     res.json({ brands: brand.ref });
   });
 
