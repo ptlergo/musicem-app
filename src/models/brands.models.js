@@ -9,7 +9,11 @@ module.exports = {
       dog: () => {
         return 'hello dog';
       },
-      cat: 'test cat',
+      cat: () => {
+        return ref.set({
+          msg: 'new msg cat again',
+        });
+      },
     };
   },
 
