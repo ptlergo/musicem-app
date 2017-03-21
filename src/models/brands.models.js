@@ -5,7 +5,10 @@ const ref = fb.fireDatabase.ref('cat/');
 
 module.exports = {
   test: () => {
-    return 'test method';
+    return {
+      dog: 'test dog',
+      cat: 'test cat',
+    };
   },
 
   create: () => {
