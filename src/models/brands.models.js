@@ -15,6 +15,18 @@ module.exports = {
           msg: 'new msg cat again',
         });
       },
+      reader: () => {
+        ref.on('value', gotData, errData);
+
+        function gotData(data) {
+          console.log(data);
+        }
+
+        function errData(err) {
+          console.log('error grabing data');
+          console.log(err);
+        }
+      },
     };
   },
 
@@ -29,7 +41,9 @@ module.exports = {
 
   // TODO: have snapshot be accesible at route
   read: () => {
-
+    ref.on('value', (snapshot) => {
+      return snapshot.val();
+    });
   },
 
   update: (updateVal) => {
