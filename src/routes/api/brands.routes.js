@@ -19,6 +19,12 @@ module.exports = (express) => {
     res.json({ brands: '' });
   });
 
+  // Create A brands
+  router.post('/brands/test', (req, res) => {
+    config.debug('brand route create', brand.create('new brand created'));
+    res.json({ brands: 'brand created' });
+  });
+
   // Update A brand
   router.put('/brands/:id', (req, res) => {
     res.json({ brands: '' });
