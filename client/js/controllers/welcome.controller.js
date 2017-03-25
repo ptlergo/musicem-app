@@ -9,7 +9,7 @@
  */
 function WelcomeController(welcomeService) {
   const vm = this;
-  vm.ws = welcomeService;
+  vm.ws = welcomeService.section;
   vm.msg = 'welcome controller';
 }
 

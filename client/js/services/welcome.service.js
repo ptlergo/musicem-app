@@ -12,6 +12,8 @@ function welcomeService() {
     section: [
       {
         tagline: 'tagline',
+        msg: 'msg',
+        image: '',
       },
       {
         tagline: 'tagline 2',

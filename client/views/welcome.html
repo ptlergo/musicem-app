@@ -1,12 +1,13 @@
 <div ng-controller = "WelcomeController as welcomeCtrl">
+  <div ng-repeat = "section in welcomeCtrl.ws track by $index"
   <div class = "welcome-1">
-    <h1>{{welcomeCtrl.ws}}</h1>
+    <h1>{{section.tagline}}</h1>
     <div class = "welcome-summary">
-      <p>{{welcomeCtrl.msg}}</p>
+      <p>{{section.msg}}</p>
       <button></button>
     </div>
     <div class = "welcome-images">
-      <img></img>
+      <img ng.src = "{{section.img}}"></img>
     </div>
     <div class = "welcome-bottom">
       <i>arrow</i>
