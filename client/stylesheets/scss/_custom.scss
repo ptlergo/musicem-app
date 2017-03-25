@@ -1,0 +1,23 @@
+body{
+  display: flex;
+-webkit-flex-direction: column;
+flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+header {
+    order: 1;
+    height: 10vh;
+}
+
+.container {
+    order: 2;
+}
+
+
+footer {
+    order: 3;
+}
