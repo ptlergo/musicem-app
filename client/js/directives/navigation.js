@@ -9,7 +9,7 @@
  */
 function navigationBar() {
   return {
-    restrict: 'E',
+    restrict: 'AEC',
     templateUrl: '../views/templates/navigation.html',
   };
 }
