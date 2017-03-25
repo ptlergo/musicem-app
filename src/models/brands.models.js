@@ -3,6 +3,18 @@ const fb = require('./fireConfig');
 
 const ref = fb.fireDatabase.ref('cat/');
 
+const dataval = ref.on('value', gotData, errData);
+
+function gotData(data) {
+  const msg = data.val().msg;
+  console.log(msg);
+}
+
+function errData(err) {
+  console.log('error grabing data');
+  console.log(err);
+}
+
 module.exports = {
   test: () => {
     return {
@@ -16,16 +28,7 @@ module.exports = {
         });
       },
       reader: () => {
-        ref.on('value', gotData, errData);
-
-        function gotData(data) {
-          console.log(data.val());
-        }
-
-        function errData(err) {
-          console.log('error grabing data');
-          console.log(err);
-        }
+        return 'dataval()';
       },
     };
   },
