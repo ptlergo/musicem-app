@@ -9,7 +9,7 @@
  */
 function feedsContainer() {
   return {
-    restrict: 'E',
+    restrict: 'AEC',
     templateUrl: '../views/feeds-container.html',
   };
 }
