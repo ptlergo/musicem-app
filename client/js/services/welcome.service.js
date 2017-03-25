@@ -16,6 +16,8 @@ function welcomeService() {
       {
         tagline: 'tagline 2',
       },
-    ]
+    ],
+  };
 }
+
 angular.module('myApp').factory('welcomeService', welcomeService);

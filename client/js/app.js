@@ -9,7 +9,7 @@ angular
   };
 
   const welcomeState = {
-    controller: 'MainController',
+    controller: 'WelcomeController',
     name: 'welcome',
     templateUrl: '../views/welcome.html',
     url: '/welcome',
