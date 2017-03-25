@@ -2,7 +2,7 @@
 # musicem-app(v1.0.0-alpha)
 Music Curating App Built Using MEAN Stack. Firebase auth for facebook login. Deployed to google cloud server: [http://musicem-cd810.appspot.com](http://musicem-cd810.appspot.com)
 
-#INSTALL
+# INSTALL
 Install all node package dependencies
 ```
 npm install
@@ -23,7 +23,7 @@ Install gulp globally to run app tasks
 npm install --global gulp-cli
 ```
 
-##BOWER
+## BOWER
 Install bower globally
 ```
 npm install -g bower
@@ -34,13 +34,13 @@ Install bower components for client side
 bower install
 ```
 
-##BROWSER SYNC
+## BROWSER SYNC
 Install browser sync globally
 ```
 npm install -g browser-sync
 ```
 
-##GULP TASKS
+## GULP TASKS
 Default gulp task to start server, watch sass, and run browsersync
 ```
 gulp
@@ -66,13 +66,13 @@ run browser-sync
 gulp browser-sync
 ```
 
-#UNIT TEST
+# UNIT TEST
 Run mocha test for app.
 ```
 npm test
 ```
 
-#CONFIGURE
+# CONFIGURE
 Configure .env file for database. Here are some acceptable sample environment variables one will receive from [firebase.google.com](firebase.google.com) to initialize a firebase app.
 ```
 NODE_ENV=development
@@ -84,10 +84,10 @@ STORAGE_BUCKET="<bucket>.appspot.com"
 M_S_ID=1234567891234
 
 ```
-#AUTHENTICATION
+# AUTHENTICATION
 FirebaseUI is built on top of firebase for easy user login/register.
 
-#RUN
+# RUN
 After running app. visit it from the default port at: [http://localhost:3000](http://localhost:3000)
 ```
 npm start
