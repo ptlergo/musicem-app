@@ -21,10 +21,10 @@ footer {
   background-color: #00BBD3; }
 
 .welcome {
-  color: #4A4A4A; }
+  color: #4A4A4A;
+  height: 100vh;
+  padding: 7%;
+  text-align: center; }
   @media only screen and (max-width: 480px) {
-    .welcome {
-      padding: 7%;
-      text-align: center; }
-      .welcome h2 {
-        font-size: 20pt; } }
+    .welcome h2 {
+      font-size: 20pt; } }

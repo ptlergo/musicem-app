@@ -29,9 +29,11 @@ footer {
 
 .welcome{
   color: #4A4A4A;
+  height: 100vh;
+  padding: 7%;
+  text-align: center;
   @include phone{
-    padding: 7%;
-    text-align: center;
+
     h2{
       font-size: 20pt;
     }
