@@ -1,0 +1,7 @@
+.welcome{
+  @include phone{
+    h2{
+      font-size: 50pt;
+    }
+  }
+}

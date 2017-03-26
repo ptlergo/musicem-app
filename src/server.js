@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 const config = require('./config');
 
 const PORT_DEFAULT = 3000;
@@ -17,8 +16,13 @@ app.use('/', apiRoutes);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: 'false' }));
 
-// Allow cross origin access from any domains
-app.use(cors());
+// Set headers to be able to conduct karma tests
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, content-type, Authrization');
+  next();
+});
 
 // Connect angularjs client side views
 app.use(express.static(path.join(__dirname, '../client/')));
