@@ -20,7 +20,7 @@ gulp.task('start', () => {
 gulp.task('browser-sync', () => {
   browserSync.init({
     server: {
-      baseDir: './client',
+      baseDir: './',
     },
     files: ['./client', './src'],
   });
@@ -45,7 +45,7 @@ gulp.task('sass', () => {
 });
 
 /* Default task that watches Sass, html, and reloads browsersync for changes */
-gulp.task('default', ['start', 'browser-sync'], () => {
+gulp.task('default', ['browser-sync'], () => {
   gulp.watch(sassSource, ['sass']);
   gulp.watch('./client/*.html').on('change', browserSync.reload);
 });
