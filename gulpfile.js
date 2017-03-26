@@ -5,7 +5,7 @@ const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const gulpDocs = require('gulp-ngdocs');
 
-const sassSource = './client/stylesheets/scss/*.scss';
+const sassSource = './client/stylesheets/sass/*.scss';
 const sassDest = './client/stylesheets/css';
 
 /* Compile node server with nodemon */
@@ -20,7 +20,7 @@ gulp.task('start', () => {
 gulp.task('browser-sync', () => {
   browserSync.init({
     server: {
-      baseDir: './src',
+      baseDir: './client',
     },
     files: ['./client', './src'],
   });

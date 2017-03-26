@@ -1,3 +1,6 @@
+h2 {
+  font-size: 16px; }
+
 body {
   display: flex;
   -webkit-flex-direction: column;
@@ -16,27 +19,3 @@ header {
 
 footer {
   order: 3; }
-
-.welcome-1 {
-  background: red;
-  height: 100%; }
-
-.welcome-2 {
-  background: blue;
-  height: 100%; }
-
-.welcome-3 {
-  background: yellow;
-  height: 100%; }
-
-.welcome-4 {
-  background: green;
-  height: 100%; }
-
-.welcome-5 {
-  background: purple;
-  height: 100%; }
-
-.welcome-6 {
-  background: pink;
-  height: 100%; }
