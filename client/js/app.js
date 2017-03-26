@@ -4,14 +4,14 @@ angular
   const contentState = {
     controller: 'FeedController',
     name: 'home',
-    templateUrl: '../views/home.html',
+    templateUrl: '/views/home.html',
     url: '/home',
   };
 
   const welcomeState = {
     controller: 'WelcomeController',
     name: 'welcome',
-    templateUrl: '../views/welcome.html',
+    templateUrl: '/views/welcome.html',
     url: '/welcome',
   };
 

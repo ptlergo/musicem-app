@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 app.use(express.static(path.join(__dirname, '../client/')));
 
 // CSide view directory set and view engine set
-app.set('views', path.join(__dirname, '../client/views'));
+app.set('views', path.join(__dirname, '../client'));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
