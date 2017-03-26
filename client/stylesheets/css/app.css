@@ -17,14 +17,25 @@ header {
 footer {
   order: 3; }
 
-.md-raised {
-  background-color: #00BBD3; }
+button .md-raised {
+  background-color: #00BBD3 !important; }
 
 .welcome {
   color: #4A4A4A;
   height: 100vh;
   padding: 7%;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
+  .welcome .welcome-bottom {
+    position: relative;
+    padding-bottom: 10%; }
+    @media only screen and (max-width: 480px) {
+      .welcome .welcome-bottom {
+        top: calc(35% - 20%); } }
+  .welcome .welcome-images {
+    margin: 20% auto; }
+    .welcome .welcome-images img {
+      width: 20%; }
   @media only screen and (max-width: 480px) {
     .welcome h2 {
       font-size: 20pt; } }

@@ -23,8 +23,8 @@ footer {
     order: 3;
 }
 
-.md-raised{
-  background-color: #00BBD3;
+button .md-raised{
+  background-color: #00BBD3 !important;
 }
 
 .welcome{
@@ -32,6 +32,21 @@ footer {
   height: 100vh;
   padding: 7%;
   text-align: center;
+  position: relative;
+  .welcome-bottom{
+    position: relative;
+    padding-bottom: 10%;
+
+    @include phone{
+      top: calc(35% - 20%);
+    }
+    }
+  .welcome-images{
+    margin: 20% auto;
+    img{
+      width: 20%;
+    }
+  }
   @include phone{
 
     h2{

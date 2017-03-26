@@ -16,7 +16,7 @@ function welcomeService() {
               fetches your favorite music feeds
               from the best curated brands for your
               personal customizable needs.`,
-        image: 'logo',
+        image: '../../img/musicem-logo.png',
       },
       {
         tagline: 'Stay informed with music’em!',
