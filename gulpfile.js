@@ -1,11 +1,10 @@
-const log = require('./src/config').debug;
 const gulp = require('gulp');
 const nodemon = require('nodemon');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 const gulpDocs = require('gulp-ngdocs');
 
-const sassSource = './client/stylesheets/sass/*.scss';
+const sassSource = './client/stylesheets/sass/**/*.scss';
 const sassDest = './client/stylesheets/css';
 
 /* Compile node server with nodemon */
@@ -20,9 +19,9 @@ gulp.task('start', () => {
 gulp.task('browser-sync', () => {
   browserSync.init({
     server: {
-      baseDir: './',
+      baseDir: './client',
     },
-    files: ['./client', './src'],
+    files: ['./client'],
   });
 });
 
@@ -47,5 +46,5 @@ gulp.task('sass', () => {
 /* Default task that watches Sass, html, and reloads browsersync for changes */
 gulp.task('default', ['browser-sync'], () => {
   gulp.watch(sassSource, ['sass']);
-  gulp.watch('./client/*.html').on('change', browserSync.reload);
+  gulp.watch('./client/views/index.html').on('change', browserSync.reload);
 });
