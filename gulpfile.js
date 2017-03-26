@@ -44,7 +44,7 @@ gulp.task('sass', () => {
 });
 
 /* Default task that watches Sass, html, and reloads browsersync for changes */
-gulp.task('default', ['browser-sync'], () => {
+gulp.task('default', ['browser-sync', 'start'], () => {
   gulp.watch(sassSource, ['sass']);
   gulp.watch('./client/views/index.html').on('change', browserSync.reload);
 });
