@@ -1,10 +1,14 @@
 <div ng-controller = "WelcomeController as welcomeCtrl">
-  <div ng-repeat = "section in welcomeCtrl.ws track by $index"
-  <div class = "welcome-1">
-    <h1>{{section.tagline}}</h1>
+  <div class = "welcome" ng-repeat = "section in welcomeCtrl.ws track by $index">
+  <div class = "welcome-{{$index}}">
+    <h2>{{section.tagline}}</h2>
     <div class = "welcome-summary">
       <p>{{section.msg}}</p>
-      <md-button class="md-raised md-primary">Sign Up For Free!</md-button>
+      <div style = "text-align: center;">
+        <md-button class="md-raised md-primary">Start For Free!</md-button>
+        <br>
+        <md-button class="md-raised md-primary">Existing User Login</md-button>
+    </div>
     </div>
     <div class = "welcome-images">
       <img ng.src = "{{section.img}}"></img>
@@ -12,4 +16,6 @@
     <div class = "welcome-bottom">
       <i>arrow</i>
     </div>
+</div>
+</div>
 </div>
