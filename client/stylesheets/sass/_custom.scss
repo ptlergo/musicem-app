@@ -23,14 +23,20 @@ footer {
     order: 3;
 }
 
-button .md-raised{
-  background-color: #00BBD3 !important;
+button{
+  font-size: medium !important;
+font-weight: bold !important;
+padding-left: 5% !important;
+padding-right: 5% !important;
+color: #ffffff !important;
+
 }
 
 .welcome{
   color: #4A4A4A;
   height: 100vh;
-  padding: 7%;
+  padding: 2% 5% 10% 5%;
+
   text-align: center;
   position: relative;
   .welcome-bottom{
@@ -42,7 +48,7 @@ button .md-raised{
     }
     }
   .welcome-images{
-    margin: 20% auto;
+    margin: 10% auto;
     img{
       width: 20%;
     }
@@ -68,5 +74,6 @@ button .md-raised{
 
   i {
    animation: bounce 2s infinite;
+   font-size: 45px;
 }
 }

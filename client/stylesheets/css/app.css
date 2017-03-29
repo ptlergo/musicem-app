@@ -17,13 +17,17 @@ header {
 footer {
   order: 3; }
 
-button .md-raised {
-  background-color: #00BBD3 !important; }
+button {
+  font-size: medium !important;
+  font-weight: bold !important;
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+  color: #ffffff !important; }
 
 .welcome {
   color: #4A4A4A;
   height: 100vh;
-  padding: 7%;
+  padding: 2% 5% 10% 5%;
   text-align: center;
   position: relative; }
   .welcome .welcome-bottom {
@@ -33,7 +37,7 @@ button .md-raised {
       .welcome .welcome-bottom {
         top: calc(35% - 20%); } }
   .welcome .welcome-images {
-    margin: 20% auto; }
+    margin: 10% auto; }
     .welcome .welcome-images img {
       width: 20%; }
   @media only screen and (max-width: 480px) {
@@ -48,4 +52,5 @@ button .md-raised {
   60% {
     transform: translateY(-15px); } }
   .welcome i {
-    animation: bounce 2s infinite; }
+    animation: bounce 2s infinite;
+    font-size: 45px; }
