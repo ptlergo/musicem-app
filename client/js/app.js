@@ -1,6 +1,10 @@
 angular
 .module('myApp', ['ui.router', 'ngAnimate', 'ngMaterial', 'ngSanitize'])
-.config(($stateProvider, $locationProvider, $urlRouterProvider) => {
+.config(($stateProvider, $locationProvider, $urlRouterProvider, $mdThemingProvider) => {
+  $mdThemingProvider.theme('default')
+    .primaryPalette('cyan')
+    .accentPalette('cyan');
+
   const contentState = {
     controller: 'FeedController',
     name: 'home',
