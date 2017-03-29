@@ -12,7 +12,7 @@ function welcomeService() {
     section: [
       {
         tagline: 'Welcome to music’em!',
-        msg: `A content agregation application that
+        msg: `music'em is a content agregation application that
               fetches your favorite music feeds
               from the best curated brands for your
               personal customizable needs.`,
@@ -34,14 +34,14 @@ function welcomeService() {
               amount of trusted brands. These brands are
               the taste makers in the music industry. Our list
               is maintained daily.`,
-        image: '',
+        image: '../../img/welcome-brands.png',
       },
       {
         tagline: 'Intuitive Features!',
         msg: `Use powerful features such as
               filters, content saving, sharing, and others
               to personalize your own feed.`,
-        image: '',
+        image: '../../img/welcome-features.png',
       },
     ],
   };

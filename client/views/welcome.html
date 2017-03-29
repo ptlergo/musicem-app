@@ -3,8 +3,8 @@
   <div class = "welcome-{{$index}}">
     <h2>{{section.tagline}}</h2>
     <div class = "welcome-summary">
-      <p>{{section.msg}}</p>
-      <div style = "text-align: center;">
+      <h4>{{section.msg}}</h4>
+      <div class = "welcome-buttons">
         <md-button class="md-raised md-primary">Start For Free!</md-button>
         <br>
         <md-button class="md-raised md-primary">Existing User Login</md-button>
@@ -13,10 +13,10 @@
     <div class = "welcome-images">
       <img ng-src = "{{section.image}}"></img>
     </div>
+    <div class = "welcome-bottom">
+      <i class="material-icons md-48 bounce">arrow_drop_down</i>
+    </div>
+</div>
 
-</div>
-<div class = "welcome-bottom">
-  <i class="material-icons md-48 bounce">arrow_drop_down</i>
-</div>
 </div>
 </div>
